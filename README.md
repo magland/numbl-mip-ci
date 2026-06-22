@@ -21,7 +21,10 @@ Pages as an interactive table. **[View the report &rarr;](https://magland.github
 
 - numbl is built fresh from the `main` branch of `flatironinstitute/numbl` on
   every run, so the report always reflects the latest numbl.
-- The package list comes from `mip avail` (the live channel index).
+- The package list is the full channel index
+  (`https://mip-org.github.io/mip-core/index.json`), arch-independent — so
+  native-only packages with no numbl build still appear (as `arch_unavailable`)
+  rather than being silently dropped the way `mip avail` would.
 - Each package runs in its own numbl process via [`scripts/driver.m`](scripts/driver.m),
   which emits machine-readable `@@STEP_*` markers. Load state is in-process, so
   the whole lifecycle must share one process.

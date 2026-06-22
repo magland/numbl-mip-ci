@@ -79,18 +79,40 @@ function getNumblCommit() {
   return r.status === 0 ? r.stdout.trim() : process.env.NUMBL_COMMIT || null;
 }
 
-function getPackageList() {
+// The channel index lives at https://<owner>.github.io/mip-<channel>/index.json
+// (e.g. mip-org/core -> https://mip-org.github.io/mip-core/index.json).
+function channelIndexUrl(ch) {
+  const [owner, name] = ch.split("/");
+  return `https://${owner}.github.io/mip-${name}/index.json`;
+}
+
+// Enumerate every package in the channel, arch-independently. We deliberately
+// use the raw index rather than `mip avail`: `mip avail` filters to the current
+// architecture, hiding native-only packages (no numbl/any build) that we still
+// want to test and report as `arch_unavailable`.
+async function getPackageList() {
   if (args.packages && args.packages !== "true") {
     return args.packages.split(",").map((s) => s.trim()).filter(Boolean);
   }
-  const r = runNumbl(["eval", "mip avail"], { timeout: 180000 });
-  const text = (r.stdout || "") + (r.stderr || "");
-  const names = new Set();
-  for (const line of text.split("\n")) {
-    const m = line.match(/^\s*([\w.\-]+\/[\w.\-]+)\/([\w.\-]+)\s*$/);
-    if (m) names.add(m[2]);
+  const url = channelIndexUrl(channel);
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const index = await resp.json();
+    const names = new Set((index.packages || []).map((p) => p.name).filter(Boolean));
+    if (names.size) return [...names].sort();
+    throw new Error("index had no packages");
+  } catch (err) {
+    console.error(`WARN: failed to read channel index (${url}): ${err.message}; falling back to 'mip avail'`);
+    const r = runNumbl(["eval", "mip avail"], { timeout: 180000 });
+    const text = (r.stdout || "") + (r.stderr || "");
+    const names = new Set();
+    for (const line of text.split("\n")) {
+      const m = line.match(/^\s*([\w.\-]+\/[\w.\-]+)\/([\w.\-]+)\s*$/);
+      if (m) names.add(m[2]);
+    }
+    return [...names].sort();
   }
-  return [...names].sort();
 }
 
 // Run the driver for one package, capturing stdout+stderr in arrival order.
@@ -242,7 +264,7 @@ async function main() {
   const skip = new Set(
     (args.skip && args.skip !== "true" ? args.skip.split(",").map((s) => s.trim()) : DEFAULT_SKIP).filter(Boolean)
   );
-  const packages = getPackageList().filter((p) => !skip.has(p));
+  const packages = (await getPackageList()).filter((p) => !skip.has(p));
   const selected = limit ? packages.slice(0, limit) : packages;
   console.error(`Testing ${selected.length} package(s) from ${channel}` + (skip.size ? ` (skipping: ${[...skip].join(", ")})` : ""));
 
