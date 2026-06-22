@@ -1,0 +1,72 @@
+name: numbl-mip-ci
+
+on:
+  schedule:
+    - cron: "0 7 * * *" # daily at 07:00 UTC
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+# Don't run overlapping reports; let the newest win.
+concurrency:
+  group: numbl-mip-ci
+  cancel-in-progress: false
+
+permissions:
+  contents: write # push report to the gh-pages branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout numbl-mip-ci
+        uses: actions/checkout@v4
+
+      - name: Checkout numbl (main)
+        uses: actions/checkout@v4
+        with:
+          repository: flatironinstitute/numbl
+          ref: main
+          path: numbl
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build numbl CLI
+        working-directory: numbl
+        env:
+          HUSKY: 0
+        run: |
+          npm ci
+          npm run build:cli
+
+      - name: Run mip lifecycle for every package
+        env:
+          NUMBL_DIR: ${{ github.workspace }}/numbl
+          NUMBL_REF: main
+        run: |
+          node scripts/run-tests.mjs \
+            --numbl numbl/dist-cli/cli.js \
+            --out site/report.json
+
+      - name: Archive timestamped copy of the report
+        run: |
+          mkdir -p site/reports
+          stamp="$(date -u +%Y-%m-%dT%H-%M-%SZ)"
+          cp site/report.json "site/reports/report-${stamp}.json"
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: site/report.json
+
+      - name: Publish site to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          keep_files: true # preserve previously archived reports under reports/
