@@ -1,0 +1,2294 @@
+{
+  "generatedAt": "2026-06-22T13:32:13.688Z",
+  "channel": "mip-org/core",
+  "arch": "numbl_linux_x86_64",
+  "numbl": {
+    "version": "0.4.5",
+    "commit": "63aa3b57111b662ed74af7c3d5e27843d97c8926",
+    "ref": "main"
+  },
+  "skipped": [
+    "mip"
+  ],
+  "steps": [
+    "install",
+    "load",
+    "test",
+    "unload",
+    "uninstall"
+  ],
+  "summary": {
+    "total": 41,
+    "ok": 14,
+    "byCategory": {
+      "test_failed": 25,
+      "ok": 14,
+      "install_error": 2
+    }
+  },
+  "packages": [
+    {
+      "name": "aabb_tree",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/aabb_tree\": Cannot convert cell to string",
+      "durationMs": 558,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 98,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/aabb_tree\"...\nPackage \"mip-org/core/aabb_tree\" is already installed\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 34,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/aabb_tree\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 56,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/aabb_tree\": Cannot convert cell to string",
+          "log": "Running test script for \"mip-org/core/aabb_tree\": test_aabb_tree_channel.m\n=== Testing AABB-TREE ===\n\nError inside test script for \"mip-org/core/aabb_tree\":\n  Cannot convert cell to string\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/aabb_tree/aabb_tree/test_aabb_tree_channel.m:17\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"aabb_tree\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 54,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/aabb_tree\"...\nUninstalled package \"mip-org/core/aabb_tree\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/aabb_tree\"...\nPackage \"mip-org/core/aabb_tree\" is already installed\n\nAll packages already installed.\n@@STEP_END install status=ok ms=98\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/aabb_tree\"\n@@STEP_END load status=ok ms=34\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/aabb_tree\": test_aabb_tree_channel.m\n=== Testing AABB-TREE ===\n\nError inside test script for \"mip-org/core/aabb_tree\":\n  Cannot convert cell to string\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/aabb_tree/aabb_tree/test_aabb_tree_channel.m:17\n\n@@STEP_END test status=fail ms=56 id=mip:test:failed msg=Test failed for \"mip-org/core/aabb_tree\": Cannot convert cell to string\n@@STEP_BEGIN unload\nPackage \"aabb_tree\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/aabb_tree\"...\nUninstalled package \"mip-org/core/aabb_tree\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=54\n@@ALL_DONE\n"
+    },
+    {
+      "name": "bisection",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 1263,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 862,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/bisection\"...\n\nInstallation plan:\n  - mip-org/core/bisection master\n\nDownloading mip-org/core/bisection master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/bisection-master/bisection-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/bisection\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load bisection\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 35,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/bisection\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 44,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/bisection\": test_bisection_channel.m\n=== Testing BISECTION ===\n  scalar root OK (1.414214)\n  vectorized roots OK ([1.4142 1.7321 2])\n=== BISECTION test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 12,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"bisection\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 57,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/bisection\"...\nUninstalled package \"mip-org/core/bisection\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/bisection\"...\n\nInstallation plan:\n  - mip-org/core/bisection master\n\nDownloading mip-org/core/bisection master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/bisection-master/bisection-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/bisection\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load bisection\n@@STEP_END install status=ok ms=862\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/bisection\"\n@@STEP_END load status=ok ms=35\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/bisection\": test_bisection_channel.m\n=== Testing BISECTION ===\n  scalar root OK (1.414214)\n  vectorized roots OK ([1.4142 1.7321 2])\n=== BISECTION test passed ===\n@@STEP_END test status=ok ms=44\n@@STEP_BEGIN unload\nPackage \"bisection\" is not currently loaded\n@@STEP_END unload status=ok ms=12\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/bisection\"...\nUninstalled package \"mip-org/core/bisection\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=57\n@@ALL_DONE\n"
+    },
+    {
+      "name": "chebfun",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 3696,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 2608,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/chebfun\"...\n\nInstallation plan:\n  - mip-org/core/chebfun 5.7.0\n\nDownloading mip-org/core/chebfun 5.7.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/chebfun-5.7.0/chebfun-5.7.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/chebfun\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load chebfun\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 418,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/chebfun\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 307,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/chebfun\": test_chebfun.m\nTesting chebfun construction and integration...\n[matmul] using bridge: native LAPACK addon\nTesting differentiation...\nTesting roots...\n[eig] using bridge: native LAPACK addon\nTesting max...\nTesting cumsum...\nTesting pointwise algebra...\nSUCCESS\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 6,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"chebfun\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 65,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/chebfun\"...\nUninstalled package \"mip-org/core/chebfun\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/chebfun\"...\n\nInstallation plan:\n  - mip-org/core/chebfun 5.7.0\n\nDownloading mip-org/core/chebfun 5.7.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/chebfun-5.7.0/chebfun-5.7.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/chebfun\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load chebfun\n@@STEP_END install status=ok ms=2608\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/chebfun\"\n@@STEP_END load status=ok ms=418\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/chebfun\": test_chebfun.m\nTesting chebfun construction and integration...\n[matmul] using bridge: native LAPACK addon\nTesting differentiation...\nTesting roots...\n[eig] using bridge: native LAPACK addon\nTesting max...\nTesting cumsum...\nTesting pointwise algebra...\nSUCCESS\n@@STEP_END test status=ok ms=307\n@@STEP_BEGIN unload\nPackage \"chebfun\" is not currently loaded\n@@STEP_END unload status=ok ms=6\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/chebfun\"...\nUninstalled package \"mip-org/core/chebfun\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=65\n@@ALL_DONE\n"
+    },
+    {
+      "name": "chunkie",
+      "category": "install_error",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "install",
+      "errorId": "mip:packageNotFound",
+      "errorMessage": "Package(s) not found in repository: mip-org/core/fmm2d |  |",
+      "durationMs": 382,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "fail",
+          "ms": 83,
+          "errorId": "mip:packageNotFound",
+          "errorMessage": "Package(s) not found in repository: mip-org/core/fmm2d |  |",
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/chunkie\"...\n"
+        },
+        {
+          "name": "load",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        },
+        {
+          "name": "test",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        },
+        {
+          "name": "unload",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        },
+        {
+          "name": "uninstall",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/chunkie\"...\n@@STEP_END install status=fail ms=83 id=mip:packageNotFound msg=Package(s) not found in repository: mip-org/core/fmm2d |  | \n@@STEP_SKIP load reason=install_failed\n@@STEP_SKIP test reason=install_failed\n@@STEP_SKIP unload reason=install_failed\n@@STEP_SKIP uninstall reason=install_failed\n@@ALL_DONE\n"
+    },
+    {
+      "name": "cmocean",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 560,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 83,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/cmocean\"...\nPackage \"mip-org/core/cmocean\" is already installed\n\nWarning: Package \"cmocean\" is installed from multiple channels:\n  - mip-org/core/cmocean\n  - mip-org/dev/cmocean\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 73,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/cmocean\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 94,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/cmocean\": test_cmocean.m\nTesting cmocean is on the path...\nTesting default colormap size...\nTesting custom level count...\nTesting reversed colormap...\nTesting diverging colormap name...\nSUCCESS\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 11,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"cmocean\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 13,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package name \"cmocean\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/cmocean\n  mip-org/dev/cmocean\nPlease specify the fully qualified name to uninstall.\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/cmocean\"...\nPackage \"mip-org/core/cmocean\" is already installed\n\nWarning: Package \"cmocean\" is installed from multiple channels:\n  - mip-org/core/cmocean\n  - mip-org/dev/cmocean\n\nAll packages already installed.\n@@STEP_END install status=ok ms=83\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/cmocean\"\n@@STEP_END load status=ok ms=73\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/cmocean\": test_cmocean.m\nTesting cmocean is on the path...\nTesting default colormap size...\nTesting custom level count...\nTesting reversed colormap...\nTesting diverging colormap name...\nSUCCESS\n@@STEP_END test status=ok ms=94\n@@STEP_BEGIN unload\nPackage \"cmocean\" is not currently loaded\n@@STEP_END unload status=ok ms=11\n@@STEP_BEGIN uninstall\nPackage name \"cmocean\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/cmocean\n  mip-org/dev/cmocean\nPlease specify the fully qualified name to uninstall.\n@@STEP_END uninstall status=ok ms=13\n@@ALL_DONE\n"
+    },
+    {
+      "name": "disk_conformal_map",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/disk_conformal_map\": Undefined function or variable 'TriRep'",
+      "durationMs": 9921,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 9408,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/disk_conformal_map\"...\n\nInstallation plan:\n  - mip-org/core/disk_conformal_map master\n\nDownloading mip-org/core/disk_conformal_map master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/disk_conformal_map-master/disk_conformal_map-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/disk_conformal_map\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load disk_conformal_map\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 38,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/disk_conformal_map\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 66,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/disk_conformal_map\": Undefined function or variable 'TriRep'",
+          "log": "Running test script for \"mip-org/core/disk_conformal_map\": test_disk_conformal_map_channel.m\n=== Testing disk-conformal-map ===\n\nError inside test script for \"mip-org/core/disk_conformal_map\":\n  Undefined function or variable 'TriRep'\nCall stack (most recent call first):\n  at disk_conformal_map (/home/magland/.numbl/mip/packages/gh/mip-org/core/disk_conformal_map/disk_conformal_map/mfile/disk_conformal_map.m:34)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/disk_conformal_map/disk_conformal_map/test_disk_conformal_map_channel.m:28\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"disk_conformal_map\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 76,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/disk_conformal_map\"...\nUninstalled package \"mip-org/core/disk_conformal_map\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/disk_conformal_map\"...\n\nInstallation plan:\n  - mip-org/core/disk_conformal_map master\n\nDownloading mip-org/core/disk_conformal_map master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/disk_conformal_map-master/disk_conformal_map-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/disk_conformal_map\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load disk_conformal_map\n@@STEP_END install status=ok ms=9408\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/disk_conformal_map\"\n@@STEP_END load status=ok ms=38\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/disk_conformal_map\": test_disk_conformal_map_channel.m\n=== Testing disk-conformal-map ===\n\nError inside test script for \"mip-org/core/disk_conformal_map\":\n  Undefined function or variable 'TriRep'\nCall stack (most recent call first):\n  at disk_conformal_map (/home/magland/.numbl/mip/packages/gh/mip-org/core/disk_conformal_map/disk_conformal_map/mfile/disk_conformal_map.m:34)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/disk_conformal_map/disk_conformal_map/test_disk_conformal_map_channel.m:28\n\n@@STEP_END test status=fail ms=66 id=mip:test:failed msg=Test failed for \"mip-org/core/disk_conformal_map\": Undefined function or variable 'TriRep'\n@@STEP_BEGIN unload\nPackage \"disk_conformal_map\" is not currently loaded\n@@STEP_END unload status=ok ms=8\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/disk_conformal_map\"...\nUninstalled package \"mip-org/core/disk_conformal_map\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=76\n@@ALL_DONE\n"
+    },
+    {
+      "name": "distmesh",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 6766,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 6242,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/distmesh\"...\n\nInstallation plan:\n  - mip-org/core/distmesh main\n\nDownloading mip-org/core/distmesh main...\nDownloading from https://github.com/mip-org/mip-core/releases/download/distmesh-main/distmesh-main-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/distmesh\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load distmesh\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 35,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/distmesh\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 155,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/distmesh\": test_distmesh_channel.m\n=== Testing DistMesh ===\n[matmul] using bridge: native LAPACK addon\n  distmesh2d meshed the unit disc (88 points, 143 triangles)\n=== DistMesh test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 6,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"distmesh\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 49,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/distmesh\"...\nUninstalled package \"mip-org/core/distmesh\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/distmesh\"...\n\nInstallation plan:\n  - mip-org/core/distmesh main\n\nDownloading mip-org/core/distmesh main...\nDownloading from https://github.com/mip-org/mip-core/releases/download/distmesh-main/distmesh-main-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/distmesh\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load distmesh\n@@STEP_END install status=ok ms=6242\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/distmesh\"\n@@STEP_END load status=ok ms=35\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/distmesh\": test_distmesh_channel.m\n=== Testing DistMesh ===\n[matmul] using bridge: native LAPACK addon\n  distmesh2d meshed the unit disc (88 points, 143 triangles)\n=== DistMesh test passed ===\n@@STEP_END test status=ok ms=155\n@@STEP_BEGIN unload\nPackage \"distmesh\" is not currently loaded\n@@STEP_END unload status=ok ms=6\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/distmesh\"...\nUninstalled package \"mip-org/core/distmesh\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=49\n@@ALL_DONE\n"
+    },
+    {
+      "name": "docmaker",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/docmaker\": Expected +docmaker namespace directory at /+docmaker",
+      "durationMs": 1531,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1035,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/docmaker\"...\n\nInstallation plan:\n  - mip-org/core/docmaker 0.7\n\nDownloading mip-org/core/docmaker 0.7...\nDownloading from https://github.com/mip-org/mip-core/releases/download/docmaker-0.7/docmaker-0.7-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/docmaker\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load docmaker\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 28,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/GitHub.m (syntax error at line 58)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/GitLab.m (syntax error at line 58)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/Workspace.m (syntax error at line 1)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/addclass.m (syntax error at line 9)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/capture.m (syntax error at line 11)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/encode.m (syntax error at line 19)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/hasclass.m (syntax error at line 10)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/list2array.m (syntax error at line 14)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/replacelinks.m (syntax error at line 13)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/docconvert.m (syntax error at line 36)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/docrun.m (syntax error at line 39)\nLoaded package \"mip-org/core/docmaker\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 32,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/docmaker\": Expected +docmaker namespace directory at /+docmaker",
+          "log": "Running test script for \"mip-org/core/docmaker\": test_docmaker.m\nTesting docmaker path entries...\nTesting +docmaker namespace...\n\nError inside test script for \"mip-org/core/docmaker\":\n  Expected +docmaker namespace directory at /+docmaker\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/test_docmaker.m:22\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 15,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"docmaker\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 71,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/docmaker\"...\nUninstalled package \"mip-org/core/docmaker\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/docmaker\"...\n\nInstallation plan:\n  - mip-org/core/docmaker 0.7\n\nDownloading mip-org/core/docmaker 0.7...\nDownloading from https://github.com/mip-org/mip-core/releases/download/docmaker-0.7/docmaker-0.7-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/docmaker\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load docmaker\n@@STEP_END install status=ok ms=1035\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/GitHub.m (syntax error at line 58)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/GitLab.m (syntax error at line 58)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/Workspace.m (syntax error at line 1)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/addclass.m (syntax error at line 9)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/capture.m (syntax error at line 11)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/encode.m (syntax error at line 19)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/hasclass.m (syntax error at line 10)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/list2array.m (syntax error at line 14)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/+docmaker/replacelinks.m (syntax error at line 13)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/docconvert.m (syntax error at line 36)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/docmaker/docrun.m (syntax error at line 39)\nLoaded package \"mip-org/core/docmaker\"\n@@STEP_END load status=ok ms=28\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/docmaker\": test_docmaker.m\nTesting docmaker path entries...\nTesting +docmaker namespace...\n\nError inside test script for \"mip-org/core/docmaker\":\n  Expected +docmaker namespace directory at /+docmaker\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/docmaker/docmaker/test_docmaker.m:22\n\n@@STEP_END test status=fail ms=32 id=mip:test:failed msg=Test failed for \"mip-org/core/docmaker\": Expected +docmaker namespace directory at /+docmaker\n@@STEP_BEGIN unload\nPackage \"docmaker\" is not currently loaded\n@@STEP_END unload status=ok ms=15\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/docmaker\"...\nUninstalled package \"mip-org/core/docmaker\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=71\n@@ALL_DONE\n"
+    },
+    {
+      "name": "dotenv",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/dotenv\": Undefined function or variable 'readlines'",
+      "durationMs": 2354,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1933,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/dotenv\"...\n\nInstallation plan:\n  - mip-org/core/dotenv 1.1.4\n\nDownloading mip-org/core/dotenv 1.1.4...\nDownloading from https://github.com/mip-org/mip-core/releases/download/dotenv-1.1.4/dotenv-1.1.4-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/dotenv\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load dotenv\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 30,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/dotenv\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 47,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/dotenv\": Undefined function or variable 'readlines'",
+          "log": "Running test script for \"mip-org/core/dotenv\": test_dotenv.m\nTesting dotenv class is on the path...\nWriting a temporary .env file...\nLoading the .env file via dotenv()...\n\nError inside test script for \"mip-org/core/dotenv\":\n  Undefined function or variable 'readlines'\nCall stack (most recent call first):\n  at dotenv (/home/magland/.numbl/mip/packages/gh/mip-org/core/dotenv/dotenv/dotenv.m:46)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/dotenv/dotenv/test_dotenv.m:21\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 11,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"dotenv\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 56,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/dotenv\"...\nUninstalled package \"mip-org/core/dotenv\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/dotenv\"...\n\nInstallation plan:\n  - mip-org/core/dotenv 1.1.4\n\nDownloading mip-org/core/dotenv 1.1.4...\nDownloading from https://github.com/mip-org/mip-core/releases/download/dotenv-1.1.4/dotenv-1.1.4-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/dotenv\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load dotenv\n@@STEP_END install status=ok ms=1933\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/dotenv\"\n@@STEP_END load status=ok ms=30\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/dotenv\": test_dotenv.m\nTesting dotenv class is on the path...\nWriting a temporary .env file...\nLoading the .env file via dotenv()...\n\nError inside test script for \"mip-org/core/dotenv\":\n  Undefined function or variable 'readlines'\nCall stack (most recent call first):\n  at dotenv (/home/magland/.numbl/mip/packages/gh/mip-org/core/dotenv/dotenv/dotenv.m:46)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/dotenv/dotenv/test_dotenv.m:21\n\n@@STEP_END test status=fail ms=47 id=mip:test:failed msg=Test failed for \"mip-org/core/dotenv\": Undefined function or variable 'readlines'\n@@STEP_BEGIN unload\nPackage \"dotenv\" is not currently loaded\n@@STEP_END unload status=ok ms=11\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/dotenv\"...\nUninstalled package \"mip-org/core/dotenv\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=56\n@@ALL_DONE\n"
+    },
+    {
+      "name": "export_fig",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/export_fig\": Undefined function or variable 'axes'",
+      "durationMs": 2097,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1354,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/export_fig\"...\n\nInstallation plan:\n  - mip-org/core/export_fig 3.54\n\nDownloading mip-org/core/export_fig 3.54...\nDownloading from https://github.com/mip-org/mip-core/releases/download/export_fig-3.54/export_fig-3.54-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/export_fig\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load export_fig\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 173,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/export_fig\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 164,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/export_fig\": Undefined function or variable 'axes'",
+          "log": "Running test script for \"mip-org/core/export_fig\": test_export_fig.m\nTesting export_fig path entries...\nTesting crop_borders...\nTesting PNG export...\n\nError inside test script for \"mip-org/core/export_fig\":\n  Undefined function or variable 'axes'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/export_fig/export_fig/test_export_fig.m:27\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 12,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"export_fig\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 76,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/export_fig\"...\nUninstalled package \"mip-org/core/export_fig\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/export_fig\"...\n\nInstallation plan:\n  - mip-org/core/export_fig 3.54\n\nDownloading mip-org/core/export_fig 3.54...\nDownloading from https://github.com/mip-org/mip-core/releases/download/export_fig-3.54/export_fig-3.54-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/export_fig\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load export_fig\n@@STEP_END install status=ok ms=1354\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/export_fig\"\n@@STEP_END load status=ok ms=173\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/export_fig\": test_export_fig.m\nTesting export_fig path entries...\nTesting crop_borders...\nTesting PNG export...\n\nError inside test script for \"mip-org/core/export_fig\":\n  Undefined function or variable 'axes'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/export_fig/export_fig/test_export_fig.m:27\n\n@@STEP_END test status=fail ms=164 id=mip:test:failed msg=Test failed for \"mip-org/core/export_fig\": Undefined function or variable 'axes'\n@@STEP_BEGIN unload\nPackage \"export_fig\" is not currently loaded\n@@STEP_END unload status=ok ms=12\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/export_fig\"...\nUninstalled package \"mip-org/core/export_fig\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=76\n@@ALL_DONE\n"
+    },
+    {
+      "name": "find_poly",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 7443,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 6918,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/find_poly\"...\nPackage \"mip-org/core/inpoly\" is already installed\n\nInstallation plan (2 packages):\n  - mip-org/core/aabb_tree master\n  - mip-org/core/find_poly master\n\nDownloading mip-org/core/aabb_tree master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/aabb_tree-master/aabb_tree-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/aabb_tree\"\nDownloading mip-org/core/find_poly master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/find_poly-master/find_poly-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/find_poly\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load find_poly\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 34,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loading dependencies for \"mip-org/core/find_poly\": aabb_tree, inpoly\nLoaded package \"mip-org/core/aabb_tree\"\nLoaded package \"mip-org/core/inpoly\"\nLoaded package \"mip-org/core/find_poly\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 80,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/find_poly\": test_find_poly_channel.m\n=== Testing FINDPOLY ===\nLoaded package \"mip-org/core/aabb_tree\"\nLoaded package \"mip-org/core/inpoly\"\n  point-in-polygon-collection queries OK\n=== FINDPOLY test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 12,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"find_poly\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 50,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/find_poly\"...\nUninstalled package \"mip-org/core/find_poly\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/find_poly\"...\nPackage \"mip-org/core/inpoly\" is already installed\n\nInstallation plan (2 packages):\n  - mip-org/core/aabb_tree master\n  - mip-org/core/find_poly master\n\nDownloading mip-org/core/aabb_tree master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/aabb_tree-master/aabb_tree-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/aabb_tree\"\nDownloading mip-org/core/find_poly master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/find_poly-master/find_poly-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/find_poly\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load find_poly\n@@STEP_END install status=ok ms=6918\n@@STEP_BEGIN load\nLoading dependencies for \"mip-org/core/find_poly\": aabb_tree, inpoly\nLoaded package \"mip-org/core/aabb_tree\"\nLoaded package \"mip-org/core/inpoly\"\nLoaded package \"mip-org/core/find_poly\"\n@@STEP_END load status=ok ms=34\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/find_poly\": test_find_poly_channel.m\n=== Testing FINDPOLY ===\nLoaded package \"mip-org/core/aabb_tree\"\nLoaded package \"mip-org/core/inpoly\"\n  point-in-polygon-collection queries OK\n=== FINDPOLY test passed ===\n@@STEP_END test status=ok ms=80\n@@STEP_BEGIN unload\nPackage \"find_poly\" is not currently loaded\n@@STEP_END unload status=ok ms=12\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/find_poly\"...\nUninstalled package \"mip-org/core/find_poly\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=50\n@@ALL_DONE\n"
+    },
+    {
+      "name": "find_tria",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 2086,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1600,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/find_tria\"...\nPackage \"mip-org/core/aabb_tree\" is already installed\n\nInstallation plan:\n  - mip-org/core/find_tria master\n\nDownloading mip-org/core/find_tria master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/find_tria-master/find_tria-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/find_tria\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load find_tria\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 32,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loading dependencies for \"mip-org/core/find_tria\": aabb_tree\nLoaded package \"mip-org/core/aabb_tree\"\nLoaded package \"mip-org/core/find_tria\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 69,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/find_tria\": test_find_tria_channel.m\n=== Testing FINDTRIA ===\nLoaded package \"mip-org/core/aabb_tree\"\n  point-in-triangle queries OK\n=== FINDTRIA test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 11,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"find_tria\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 52,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/find_tria\"...\nUninstalled package \"mip-org/core/find_tria\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/find_tria\"...\nPackage \"mip-org/core/aabb_tree\" is already installed\n\nInstallation plan:\n  - mip-org/core/find_tria master\n\nDownloading mip-org/core/find_tria master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/find_tria-master/find_tria-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/find_tria\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load find_tria\n@@STEP_END install status=ok ms=1600\n@@STEP_BEGIN load\nLoading dependencies for \"mip-org/core/find_tria\": aabb_tree\nLoaded package \"mip-org/core/aabb_tree\"\nLoaded package \"mip-org/core/find_tria\"\n@@STEP_END load status=ok ms=32\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/find_tria\": test_find_tria_channel.m\n=== Testing FINDTRIA ===\nLoaded package \"mip-org/core/aabb_tree\"\n  point-in-triangle queries OK\n=== FINDTRIA test passed ===\n@@STEP_END test status=ok ms=69\n@@STEP_BEGIN unload\nPackage \"find_tria\" is not currently loaded\n@@STEP_END unload status=ok ms=11\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/find_tria\"...\nUninstalled package \"mip-org/core/find_tria\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=52\n@@ALL_DONE\n"
+    },
+    {
+      "name": "flam",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 569,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 89,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/flam\"...\nPackage \"mip-org/core/flam\" is already installed\n\nWarning: Package \"flam\" is installed from multiple channels:\n  - magland/magland/flam\n  - mip-org/core/flam\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 100,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/flam\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 92,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/flam\": test_flam.m\nTesting id (interpolative decomposition)...\n[matmul] using bridge: native LAPACK addon\n[qr] using bridge: native LAPACK addon\n[linsolve] using bridge: native LAPACK addon\n[inv] using bridge: native LAPACK addon\n[norm] using bridge: native LAPACK addon\nTesting rskelf (multiply and solve)...\n[lu] using bridge: native LAPACK addon\n  rskelf_mv relative error: 3.01e-16\n  rskelf_sv relative error: 9.72e-15\nSUCCESS\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"flam\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package name \"flam\" is ambiguous. It is installed in multiple channels:\n  magland/magland/flam\n  mip-org/core/flam\nPlease specify the fully qualified name to uninstall.\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/flam\"...\nPackage \"mip-org/core/flam\" is already installed\n\nWarning: Package \"flam\" is installed from multiple channels:\n  - magland/magland/flam\n  - mip-org/core/flam\n\nAll packages already installed.\n@@STEP_END install status=ok ms=89\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/flam\"\n@@STEP_END load status=ok ms=100\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/flam\": test_flam.m\nTesting id (interpolative decomposition)...\n[matmul] using bridge: native LAPACK addon\n[qr] using bridge: native LAPACK addon\n[linsolve] using bridge: native LAPACK addon\n[inv] using bridge: native LAPACK addon\n[norm] using bridge: native LAPACK addon\nTesting rskelf (multiply and solve)...\n[lu] using bridge: native LAPACK addon\n  rskelf_mv relative error: 3.01e-16\n  rskelf_sv relative error: 9.72e-15\nSUCCESS\n@@STEP_END test status=ok ms=92\n@@STEP_BEGIN unload\nPackage \"flam\" is not currently loaded\n@@STEP_END unload status=ok ms=8\n@@STEP_BEGIN uninstall\nPackage name \"flam\" is ambiguous. It is installed in multiple channels:\n  magland/magland/flam\n  mip-org/core/flam\nPlease specify the fully qualified name to uninstall.\n@@STEP_END uninstall status=ok ms=8\n@@ALL_DONE\n"
+    },
+    {
+      "name": "geometry_processing_package",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/geometry_processing_package\": Can't open the file.",
+      "durationMs": 2580,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 2160,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/geometry_processing_package\"...\n\nInstallation plan:\n  - mip-org/core/geometry_processing_package master\n\nDownloading mip-org/core/geometry_processing_package master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/geometry_processing_package-master/geometry_processing_package-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/geometry_processing_package\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load geometry_processing_package\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 45,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/geometry_processing_package\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 56,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/geometry_processing_package\": Can't open the file.",
+          "log": "Running test script for \"mip-org/core/geometry_processing_package\": test_geometry_processing_package_channel.m\n=== Testing geometry-processing-package ===\n  grid mesh: 81 vertices, 128 faces\n\nError inside test script for \"mip-org/core/geometry_processing_package\":\n  Can't open the file.\nCall stack (most recent call first):\n  at write_off (/home/magland/.numbl/mip/packages/gh/mip-org/core/geometry_processing_package/geometry_processing_package/io/write_off.m:36)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/geometry_processing_package/geometry_processing_package/test_geometry_processing_package_channel.m:26\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"geometry_processing_package\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 64,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/geometry_processing_package\"...\nUninstalled package \"mip-org/core/geometry_processing_package\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/geometry_processing_package\"...\n\nInstallation plan:\n  - mip-org/core/geometry_processing_package master\n\nDownloading mip-org/core/geometry_processing_package master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/geometry_processing_package-master/geometry_processing_package-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/geometry_processing_package\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load geometry_processing_package\n@@STEP_END install status=ok ms=2160\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/geometry_processing_package\"\n@@STEP_END load status=ok ms=45\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/geometry_processing_package\": test_geometry_processing_package_channel.m\n=== Testing geometry-processing-package ===\n  grid mesh: 81 vertices, 128 faces\n\nError inside test script for \"mip-org/core/geometry_processing_package\":\n  Can't open the file.\nCall stack (most recent call first):\n  at write_off (/home/magland/.numbl/mip/packages/gh/mip-org/core/geometry_processing_package/geometry_processing_package/io/write_off.m:36)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/geometry_processing_package/geometry_processing_package/test_geometry_processing_package_channel.m:26\n\n@@STEP_END test status=fail ms=56 id=mip:test:failed msg=Test failed for \"mip-org/core/geometry_processing_package\": Can't open the file.\n@@STEP_BEGIN unload\nPackage \"geometry_processing_package\" is not currently loaded\n@@STEP_END unload status=ok ms=8\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/geometry_processing_package\"...\nUninstalled package \"mip-org/core/geometry_processing_package\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=64\n@@ALL_DONE\n"
+    },
+    {
+      "name": "geopdes",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/geopdes\": No method 'coefs' found",
+      "durationMs": 2021,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1192,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/geopdes\"...\nPackage \"mip-org/core/nurbs\" is already installed\n\nInstallation plan:\n  - mip-org/core/geopdes 3.4.2\n\nDownloading mip-org/core/geopdes 3.4.2...\nDownloading from https://github.com/mip-org/mip-core/releases/download/geopdes-3.4.2/geopdes-3.4.2-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/geopdes\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load geopdes\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 246,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loading dependencies for \"mip-org/core/geopdes\": nurbs\nLoaded package \"mip-org/core/nurbs\"\nLoaded package \"mip-org/core/geopdes\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 230,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/geopdes\": No method 'coefs' found",
+          "log": "Running test script for \"mip-org/core/geopdes\": test_geopdes_channel.m\n=== Testing GeoPDEs ===\nLoaded package \"mip-org/core/nurbs\"\nWarning: query\n\nError inside test script for \"mip-org/core/geopdes\":\n  No method 'coefs' found\nCall stack (most recent call first):\n  at nrbderiv (/home/magland/.numbl/mip/packages/gh/mip-org/core/nurbs/nurbs/inst/nrbderiv.m:351)\n  at geo_load (/home/magland/.numbl/mip/packages/gh/mip-org/core/geopdes/geopdes/geometry/geo_load.m:92)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/geopdes/geopdes/test_geopdes_channel.m:22\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"geopdes\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 56,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/geopdes\"...\nUninstalled package \"mip-org/core/geopdes\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/geopdes\"...\nPackage \"mip-org/core/nurbs\" is already installed\n\nInstallation plan:\n  - mip-org/core/geopdes 3.4.2\n\nDownloading mip-org/core/geopdes 3.4.2...\nDownloading from https://github.com/mip-org/mip-core/releases/download/geopdes-3.4.2/geopdes-3.4.2-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/geopdes\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load geopdes\n@@STEP_END install status=ok ms=1192\n@@STEP_BEGIN load\nLoading dependencies for \"mip-org/core/geopdes\": nurbs\nLoaded package \"mip-org/core/nurbs\"\nLoaded package \"mip-org/core/geopdes\"\n@@STEP_END load status=ok ms=246\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/geopdes\": test_geopdes_channel.m\n=== Testing GeoPDEs ===\nLoaded package \"mip-org/core/nurbs\"\nWarning: query\n\nError inside test script for \"mip-org/core/geopdes\":\n  No method 'coefs' found\nCall stack (most recent call first):\n  at nrbderiv (/home/magland/.numbl/mip/packages/gh/mip-org/core/nurbs/nurbs/inst/nrbderiv.m:351)\n  at geo_load (/home/magland/.numbl/mip/packages/gh/mip-org/core/geopdes/geopdes/geometry/geo_load.m:92)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/geopdes/geopdes/test_geopdes_channel.m:22\n\n@@STEP_END test status=fail ms=230 id=mip:test:failed msg=Test failed for \"mip-org/core/geopdes\": No method 'coefs' found\n@@STEP_BEGIN unload\nPackage \"geopdes\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/geopdes\"...\nUninstalled package \"mip-org/core/geopdes\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=56\n@@ALL_DONE\n"
+    },
+    {
+      "name": "gptoolbox",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/gptoolbox\": Too many output arguments.",
+      "durationMs": 7813,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 6980,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/gptoolbox\"...\n\nInstallation plan:\n  - mip-org/core/gptoolbox master\n\nDownloading mip-org/core/gptoolbox master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/gptoolbox-master/gptoolbox-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/gptoolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load gptoolbox\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 290,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/external/patcht.m (syntax error at line 156)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/circular_arc_to_cubics.m (syntax error at line 62)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/edge_flaps.m (syntax error at line 29)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/readBDL.m (syntax error at line 76)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/tri2tgf.m (syntax error at line 16)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/udq2quattrans.m (syntax error at line 32)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/writeBDL.m (syntax error at line 99)\nLoaded package \"mip-org/core/gptoolbox\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 180,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/gptoolbox\": Too many output arguments.",
+          "log": "Running test script for \"mip-org/core/gptoolbox\": test_gptoolbox.m\nTesting normalizerow...\nTesting doublearea...\nTesting cotmatrix...\n\nError inside test script for \"mip-org/core/gptoolbox\":\n  Too many output arguments.\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/test_gptoolbox.m:44\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 7,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"gptoolbox\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 62,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/gptoolbox\"...\nUninstalled package \"mip-org/core/gptoolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/gptoolbox\"...\n\nInstallation plan:\n  - mip-org/core/gptoolbox master\n\nDownloading mip-org/core/gptoolbox master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/gptoolbox-master/gptoolbox-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/gptoolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load gptoolbox\n@@STEP_END install status=ok ms=6980\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/external/patcht.m (syntax error at line 156)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/circular_arc_to_cubics.m (syntax error at line 62)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/edge_flaps.m (syntax error at line 29)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/readBDL.m (syntax error at line 76)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/tri2tgf.m (syntax error at line 16)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/udq2quattrans.m (syntax error at line 32)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/mesh/writeBDL.m (syntax error at line 99)\nLoaded package \"mip-org/core/gptoolbox\"\n@@STEP_END load status=ok ms=290\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/gptoolbox\": test_gptoolbox.m\nTesting normalizerow...\nTesting doublearea...\nTesting cotmatrix...\n\nError inside test script for \"mip-org/core/gptoolbox\":\n  Too many output arguments.\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/gptoolbox/gptoolbox/test_gptoolbox.m:44\n\n@@STEP_END test status=fail ms=180 id=mip:test:failed msg=Test failed for \"mip-org/core/gptoolbox\": Too many output arguments.\n@@STEP_BEGIN unload\nPackage \"gptoolbox\" is not currently loaded\n@@STEP_END unload status=ok ms=7\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/gptoolbox\"...\nUninstalled package \"mip-org/core/gptoolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=62\n@@ALL_DONE\n"
+    },
+    {
+      "name": "gramm",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/gramm\": Undefined function or variable 'shiftdim'",
+      "durationMs": 6890,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 6406,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/gramm\"...\n\nInstallation plan:\n  - mip-org/core/gramm 3.1.2\n\nDownloading mip-org/core/gramm 3.1.2...\nDownloading from https://github.com/mip-org/mip-core/releases/download/gramm-3.1.2/gramm-3.1.2-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/gramm\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load gramm\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 76,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/gramm\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 79,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/gramm\": Undefined function or variable 'shiftdim'",
+          "log": "Running test script for \"mip-org/core/gramm\": test_gramm_channel.m\n=== Testing gramm ===\n\nError inside test script for \"mip-org/core/gramm\":\n  Undefined function or variable 'shiftdim'\nCall stack (most recent call first):\n  at parse_aes (/home/magland/.numbl/mip/packages/gh/mip-org/core/gramm/gramm/@gramm/private/parse_aes.m:32)\n  at gramm (/home/magland/.numbl/mip/packages/gh/mip-org/core/gramm/gramm/@gramm/gramm.m:177)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/gramm/gramm/test_gramm_channel.m:16\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 7,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"gramm\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 59,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/gramm\"...\nUninstalled package \"mip-org/core/gramm\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/gramm\"...\n\nInstallation plan:\n  - mip-org/core/gramm 3.1.2\n\nDownloading mip-org/core/gramm 3.1.2...\nDownloading from https://github.com/mip-org/mip-core/releases/download/gramm-3.1.2/gramm-3.1.2-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/gramm\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load gramm\n@@STEP_END install status=ok ms=6406\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/gramm\"\n@@STEP_END load status=ok ms=76\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/gramm\": test_gramm_channel.m\n=== Testing gramm ===\n\nError inside test script for \"mip-org/core/gramm\":\n  Undefined function or variable 'shiftdim'\nCall stack (most recent call first):\n  at parse_aes (/home/magland/.numbl/mip/packages/gh/mip-org/core/gramm/gramm/@gramm/private/parse_aes.m:32)\n  at gramm (/home/magland/.numbl/mip/packages/gh/mip-org/core/gramm/gramm/@gramm/gramm.m:177)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/gramm/gramm/test_gramm_channel.m:16\n\n@@STEP_END test status=fail ms=79 id=mip:test:failed msg=Test failed for \"mip-org/core/gramm\": Undefined function or variable 'shiftdim'\n@@STEP_BEGIN unload\nPackage \"gramm\" is not currently loaded\n@@STEP_END unload status=ok ms=7\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/gramm\"...\nUninstalled package \"mip-org/core/gramm\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=59\n@@ALL_DONE\n"
+    },
+    {
+      "name": "hm_toolbox",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/hm_toolbox\": Undefined function or variable 'hodlr_compression'",
+      "durationMs": 2383,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1860,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/hm_toolbox\"...\n\nInstallation plan:\n  - mip-org/core/hm_toolbox master\n\nDownloading mip-org/core/hm_toolbox master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/hm_toolbox-master/hm_toolbox-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/hm_toolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load hm_toolbox\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 100,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/hm_toolbox\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 83,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/hm_toolbox\": Undefined function or variable 'hodlr_compression'",
+          "log": "Running test script for \"mip-org/core/hm_toolbox\": test_hm_toolbox_channel.m\n=== Testing hm-toolbox ===\n[matmul] using bridge: native LAPACK addon\n\nError inside test script for \"mip-org/core/hm_toolbox\":\n  Undefined function or variable 'hodlr_compression'\nCall stack (most recent call first):\n  at hodlroption (/home/magland/.numbl/mip/packages/gh/mip-org/core/hm_toolbox/hm_toolbox/hodlroption.m:35)\n  at hodlr (/home/magland/.numbl/mip/packages/gh/mip-org/core/hm_toolbox/hm_toolbox/@hodlr/hodlr.m:131)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/hm_toolbox/hm_toolbox/test_hm_toolbox_channel.m:19\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 10,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"hm_toolbox\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 55,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/hm_toolbox\"...\nUninstalled package \"mip-org/core/hm_toolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/hm_toolbox\"...\n\nInstallation plan:\n  - mip-org/core/hm_toolbox master\n\nDownloading mip-org/core/hm_toolbox master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/hm_toolbox-master/hm_toolbox-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/hm_toolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load hm_toolbox\n@@STEP_END install status=ok ms=1860\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/hm_toolbox\"\n@@STEP_END load status=ok ms=100\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/hm_toolbox\": test_hm_toolbox_channel.m\n=== Testing hm-toolbox ===\n[matmul] using bridge: native LAPACK addon\n\nError inside test script for \"mip-org/core/hm_toolbox\":\n  Undefined function or variable 'hodlr_compression'\nCall stack (most recent call first):\n  at hodlroption (/home/magland/.numbl/mip/packages/gh/mip-org/core/hm_toolbox/hm_toolbox/hodlroption.m:35)\n  at hodlr (/home/magland/.numbl/mip/packages/gh/mip-org/core/hm_toolbox/hm_toolbox/@hodlr/hodlr.m:131)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/hm_toolbox/hm_toolbox/test_hm_toolbox_channel.m:19\n\n@@STEP_END test status=fail ms=83 id=mip:test:failed msg=Test failed for \"mip-org/core/hm_toolbox\": Undefined function or variable 'hodlr_compression'\n@@STEP_BEGIN unload\nPackage \"hm_toolbox\" is not currently loaded\n@@STEP_END unload status=ok ms=10\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/hm_toolbox\"...\nUninstalled package \"mip-org/core/hm_toolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=55\n@@ALL_DONE\n"
+    },
+    {
+      "name": "inpoly",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 500,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 85,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/inpoly\"...\nPackage \"mip-org/core/inpoly\" is already installed\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 17,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/inpoly\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 57,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/inpoly\": test_inpoly_channel.m\n=== Testing INPOLY ===\n  point-in-polygon classification OK\n  agrees with built-in inpolygon (500 points)\n=== INPOLY test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 7,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"inpoly\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 52,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/inpoly\"...\nUninstalled package \"mip-org/core/inpoly\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/inpoly\"...\nPackage \"mip-org/core/inpoly\" is already installed\n\nAll packages already installed.\n@@STEP_END install status=ok ms=85\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/inpoly\"\n@@STEP_END load status=ok ms=17\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/inpoly\": test_inpoly_channel.m\n=== Testing INPOLY ===\n  point-in-polygon classification OK\n  agrees with built-in inpolygon (500 points)\n=== INPOLY test passed ===\n@@STEP_END test status=ok ms=57\n@@STEP_BEGIN unload\nPackage \"inpoly\" is not currently loaded\n@@STEP_END unload status=ok ms=7\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/inpoly\"...\nUninstalled package \"mip-org/core/inpoly\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=52\n@@ALL_DONE\n"
+    },
+    {
+      "name": "jigsaw_geo_matlab",
+      "category": "install_error",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "install",
+      "errorId": "mip:packageNotFound",
+      "errorMessage": "Package(s) not found in repository: mip-org/core/jigsaw_matlab |  |",
+      "durationMs": 363,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "fail",
+          "ms": 99,
+          "errorId": "mip:packageNotFound",
+          "errorMessage": "Package(s) not found in repository: mip-org/core/jigsaw_matlab |  |",
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/jigsaw_geo_matlab\"...\n"
+        },
+        {
+          "name": "load",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        },
+        {
+          "name": "test",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        },
+        {
+          "name": "unload",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        },
+        {
+          "name": "uninstall",
+          "status": "skipped",
+          "ms": null,
+          "errorId": null,
+          "errorMessage": null,
+          "reason": "install_failed",
+          "log": ""
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/jigsaw_geo_matlab\"...\n@@STEP_END install status=fail ms=99 id=mip:packageNotFound msg=Package(s) not found in repository: mip-org/core/jigsaw_matlab |  | \n@@STEP_SKIP load reason=install_failed\n@@STEP_SKIP test reason=install_failed\n@@STEP_SKIP unload reason=install_failed\n@@STEP_SKIP uninstall reason=install_failed\n@@ALL_DONE\n"
+    },
+    {
+      "name": "jsonlab",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/jsonlab\": Undefined function or variable 'inputname'",
+      "durationMs": 1602,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1027,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/jsonlab\"...\n\nInstallation plan:\n  - mip-org/core/jsonlab 2.9.8\n\nDownloading mip-org/core/jsonlab 2.9.8...\nDownloading from https://github.com/mip-org/mip-core/releases/download/jsonlab-2.9.8/jsonlab-2.9.8-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/jsonlab\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load jsonlab\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 74,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/jsonlab/jsonlab/jsonpath.m (syntax error at line 181)\nLoaded package \"mip-org/core/jsonlab\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 75,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/jsonlab\": Undefined function or variable 'inputname'",
+          "log": "Running test script for \"mip-org/core/jsonlab\": test_jsonlab_channel.m\n=== Testing JSONLab ===\n\nError inside test script for \"mip-org/core/jsonlab\":\n  Undefined function or variable 'inputname'\nCall stack (most recent call first):\n  at savejson (/home/magland/.numbl/mip/packages/gh/mip-org/core/jsonlab/jsonlab/savejson.m:138)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/jsonlab/jsonlab/test_jsonlab_channel.m:17\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 16,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"jsonlab\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 152,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/jsonlab\"...\nUninstalled package \"mip-org/core/jsonlab\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/jsonlab\"...\n\nInstallation plan:\n  - mip-org/core/jsonlab 2.9.8\n\nDownloading mip-org/core/jsonlab 2.9.8...\nDownloading from https://github.com/mip-org/mip-core/releases/download/jsonlab-2.9.8/jsonlab-2.9.8-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/jsonlab\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load jsonlab\n@@STEP_END install status=ok ms=1027\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/jsonlab/jsonlab/jsonpath.m (syntax error at line 181)\nLoaded package \"mip-org/core/jsonlab\"\n@@STEP_END load status=ok ms=74\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/jsonlab\": test_jsonlab_channel.m\n=== Testing JSONLab ===\n\nError inside test script for \"mip-org/core/jsonlab\":\n  Undefined function or variable 'inputname'\nCall stack (most recent call first):\n  at savejson (/home/magland/.numbl/mip/packages/gh/mip-org/core/jsonlab/jsonlab/savejson.m:138)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/jsonlab/jsonlab/test_jsonlab_channel.m:17\n\n@@STEP_END test status=fail ms=75 id=mip:test:failed msg=Test failed for \"mip-org/core/jsonlab\": Undefined function or variable 'inputname'\n@@STEP_BEGIN unload\nPackage \"jsonlab\" is not currently loaded\n@@STEP_END unload status=ok ms=16\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/jsonlab\"...\nUninstalled package \"mip-org/core/jsonlab\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=152\n@@ALL_DONE\n"
+    },
+    {
+      "name": "manopt",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/manopt\": approxhess should accept 2, 3 or 4 inputs.",
+      "durationMs": 2311,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1363,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/manopt\"...\n\nInstallation plan:\n  - mip-org/core/manopt 8.0.0\n\nDownloading mip-org/core/manopt 8.0.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/manopt-8.0.0/manopt-8.0.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/manopt\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load manopt\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 357,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/manopt\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 141,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/manopt\": approxhess should accept 2, 3 or 4 inputs.",
+          "log": "Running test script for \"mip-org/core/manopt\": test_manopt_any.m\n=== Testing Manopt (pure-MATLAB) ===\nWarning: No Hessian provided. Using FD approximation.\\nTo disable this warning: warning('off', 'manopt:getHessian:approx')\n[matmul] using bridge: native LAPACK addon\n\nError inside test script for \"mip-org/core/manopt\":\n  approxhess should accept 2, 3 or 4 inputs.\n  (identifier: manopt:getApproxHessian:badapproxhess)\nCall stack (most recent call first):\n  at getApproxHessian (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/core/getApproxHessian.m:53)\n  at getHessian (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/core/getHessian.m:101)\n  at trs_tCG_cached (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/solvers/trustregions/trs_tCG_cached.m:246)\n  at trustregions (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/solvers/trustregions/trustregions.m:498)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/test_manopt_any.m:15\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"manopt\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 87,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/manopt\"...\nUninstalled package \"mip-org/core/manopt\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/manopt\"...\n\nInstallation plan:\n  - mip-org/core/manopt 8.0.0\n\nDownloading mip-org/core/manopt 8.0.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/manopt-8.0.0/manopt-8.0.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/manopt\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load manopt\n@@STEP_END install status=ok ms=1363\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/manopt\"\n@@STEP_END load status=ok ms=357\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/manopt\": test_manopt_any.m\n=== Testing Manopt (pure-MATLAB) ===\nWarning: No Hessian provided. Using FD approximation.\\nTo disable this warning: warning('off', 'manopt:getHessian:approx')\n[matmul] using bridge: native LAPACK addon\n\nError inside test script for \"mip-org/core/manopt\":\n  approxhess should accept 2, 3 or 4 inputs.\n  (identifier: manopt:getApproxHessian:badapproxhess)\nCall stack (most recent call first):\n  at getApproxHessian (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/core/getApproxHessian.m:53)\n  at getHessian (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/core/getHessian.m:101)\n  at trs_tCG_cached (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/solvers/trustregions/trs_tCG_cached.m:246)\n  at trustregions (/home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/manopt/solvers/trustregions/trustregions.m:498)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/manopt/manopt/test_manopt_any.m:15\n\n@@STEP_END test status=fail ms=141 id=mip:test:failed msg=Test failed for \"mip-org/core/manopt\": approxhess should accept 2, 3 or 4 inputs.\n@@STEP_BEGIN unload\nPackage \"manopt\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/manopt\"...\nUninstalled package \"mip-org/core/manopt\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=87\n@@ALL_DONE\n"
+    },
+    {
+      "name": "matgeom",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 712,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 90,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matgeom\"...\nPackage \"mip-org/core/matgeom\" is already installed\n\nWarning: Package \"matgeom\" is installed from multiple channels:\n  - mip-org/core/matgeom\n  - mip-org/dev/matgeom\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 186,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/matgeom\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 137,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/matgeom\": test_matgeom.m\nTesting polygonArea...\nTesting circleToPolygon + polygonArea...\nTesting createLine + distancePointLine...\nTesting boundingBox...\nTesting createPlane + distancePointPlane...\nTesting createCube + meshVolume + meshSurfaceArea...\nSUCCESS\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"matgeom\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package name \"matgeom\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/matgeom\n  mip-org/dev/matgeom\nPlease specify the fully qualified name to uninstall.\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matgeom\"...\nPackage \"mip-org/core/matgeom\" is already installed\n\nWarning: Package \"matgeom\" is installed from multiple channels:\n  - mip-org/core/matgeom\n  - mip-org/dev/matgeom\n\nAll packages already installed.\n@@STEP_END install status=ok ms=90\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/matgeom\"\n@@STEP_END load status=ok ms=186\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/matgeom\": test_matgeom.m\nTesting polygonArea...\nTesting circleToPolygon + polygonArea...\nTesting createLine + distancePointLine...\nTesting boundingBox...\nTesting createPlane + distancePointPlane...\nTesting createCube + meshVolume + meshSurfaceArea...\nSUCCESS\n@@STEP_END test status=ok ms=137\n@@STEP_BEGIN unload\nPackage \"matgeom\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nPackage name \"matgeom\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/matgeom\n  mip-org/dev/matgeom\nPlease specify the fully qualified name to uninstall.\n@@STEP_END uninstall status=ok ms=8\n@@ALL_DONE\n"
+    },
+    {
+      "name": "matlab2tikz",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/matlab2tikz\": Undefined function or variable 'findall'",
+      "durationMs": 653,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 105,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab2tikz\"...\nPackage \"mip-org/core/matlab2tikz\" is already installed\n\nWarning: Package \"matlab2tikz\" is installed from multiple channels:\n  - mip-org/core/matlab2tikz\n  - mip-org/dev/matlab2tikz\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 61,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/matlab2tikz\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 131,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/matlab2tikz\": Undefined function or variable 'findall'",
+          "log": "Running test script for \"mip-org/core/matlab2tikz\": test_matlab2tikz.m\nTesting matlab2tikz path entries...\nTesting end-to-end figure conversion...\n\nError inside test script for \"mip-org/core/matlab2tikz\":\n  Undefined function or variable 'findall'\nCall stack (most recent call first):\n  at findPlotAxes (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/matlab2tikz.m:591)\n  at saveToFile (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/matlab2tikz.m:468)\n  at matlab2tikz (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/matlab2tikz.m:334)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/test_matlab2tikz.m:29\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 10,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"matlab2tikz\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 11,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package name \"matlab2tikz\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/matlab2tikz\n  mip-org/dev/matlab2tikz\nPlease specify the fully qualified name to uninstall.\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab2tikz\"...\nPackage \"mip-org/core/matlab2tikz\" is already installed\n\nWarning: Package \"matlab2tikz\" is installed from multiple channels:\n  - mip-org/core/matlab2tikz\n  - mip-org/dev/matlab2tikz\n\nAll packages already installed.\n@@STEP_END install status=ok ms=105\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/matlab2tikz\"\n@@STEP_END load status=ok ms=61\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/matlab2tikz\": test_matlab2tikz.m\nTesting matlab2tikz path entries...\nTesting end-to-end figure conversion...\n\nError inside test script for \"mip-org/core/matlab2tikz\":\n  Undefined function or variable 'findall'\nCall stack (most recent call first):\n  at findPlotAxes (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/matlab2tikz.m:591)\n  at saveToFile (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/matlab2tikz.m:468)\n  at matlab2tikz (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/matlab2tikz.m:334)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab2tikz/matlab2tikz/test_matlab2tikz.m:29\n\n@@STEP_END test status=fail ms=131 id=mip:test:failed msg=Test failed for \"mip-org/core/matlab2tikz\": Undefined function or variable 'findall'\n@@STEP_BEGIN unload\nPackage \"matlab2tikz\" is not currently loaded\n@@STEP_END unload status=ok ms=10\n@@STEP_BEGIN uninstall\nPackage name \"matlab2tikz\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/matlab2tikz\n  mip-org/dev/matlab2tikz\nPlease specify the fully qualified name to uninstall.\n@@STEP_END uninstall status=ok ms=11\n@@ALL_DONE\n"
+    },
+    {
+      "name": "matlab_progressbar",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/matlab_progressbar\": No method 'setProperties' for class 'ProgressBar'",
+      "durationMs": 948,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 512,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab_progressbar\"...\nPackage \"mip-org/core/matlab_progressbar\" is already installed\n\nWarning: Package \"matlab_progressbar\" is installed from multiple channels:\n  - mip-org/core/matlab_progressbar\n  - mip-org/dev/matlab_progressbar\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 22,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/matlab_progressbar\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 65,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/matlab_progressbar\": No method 'setProperties' for class 'ProgressBar'",
+          "log": "Running test script for \"mip-org/core/matlab_progressbar\": test_matlab_progressbar.m\nTesting ProgressBar class is on the path...\nTesting ProgressBar construction (inactive mode)...\n\nError inside test script for \"mip-org/core/matlab_progressbar\":\n  No method 'setProperties' for class 'ProgressBar'\nCall stack (most recent call first):\n  at ProgressBar (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_progressbar/matlab_progressbar/ProgressBar.m:137)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_progressbar/matlab_progressbar/test_matlab_progressbar.m:9\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 11,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"matlab_progressbar\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package name \"matlab_progressbar\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/matlab_progressbar\n  mip-org/dev/matlab_progressbar\nPlease specify the fully qualified name to uninstall.\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab_progressbar\"...\nPackage \"mip-org/core/matlab_progressbar\" is already installed\n\nWarning: Package \"matlab_progressbar\" is installed from multiple channels:\n  - mip-org/core/matlab_progressbar\n  - mip-org/dev/matlab_progressbar\n\nAll packages already installed.\n@@STEP_END install status=ok ms=512\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/matlab_progressbar\"\n@@STEP_END load status=ok ms=22\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/matlab_progressbar\": test_matlab_progressbar.m\nTesting ProgressBar class is on the path...\nTesting ProgressBar construction (inactive mode)...\n\nError inside test script for \"mip-org/core/matlab_progressbar\":\n  No method 'setProperties' for class 'ProgressBar'\nCall stack (most recent call first):\n  at ProgressBar (/home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_progressbar/matlab_progressbar/ProgressBar.m:137)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_progressbar/matlab_progressbar/test_matlab_progressbar.m:9\n\n@@STEP_END test status=fail ms=65 id=mip:test:failed msg=Test failed for \"mip-org/core/matlab_progressbar\": No method 'setProperties' for class 'ProgressBar'\n@@STEP_BEGIN unload\nPackage \"matlab_progressbar\" is not currently loaded\n@@STEP_END unload status=ok ms=11\n@@STEP_BEGIN uninstall\nPackage name \"matlab_progressbar\" is ambiguous. It is installed in multiple channels:\n  mip-org/core/matlab_progressbar\n  mip-org/dev/matlab_progressbar\nPlease specify the fully qualified name to uninstall.\n@@STEP_END uninstall status=ok ms=8\n@@ALL_DONE\n"
+    },
+    {
+      "name": "matlab_schemer",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 2135,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1456,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab_schemer\"...\n\nInstallation plan:\n  - mip-org/core/matlab_schemer 1.4.0\n\nDownloading mip-org/core/matlab_schemer 1.4.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/matlab_schemer-1.4.0/matlab_schemer-1.4.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/matlab_schemer\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load matlab_schemer\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 90,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_schemer/matlab_schemer/schemer_export.m (syntax error at line 233)\nLoaded package \"mip-org/core/matlab_schemer\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 93,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/matlab_schemer\": test_matlab_schemer.m\nTesting matlab_schemer path entries...\nTesting bundled schemes directory...\nSUCCESS\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 23,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"matlab_schemer\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 153,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/matlab_schemer\"...\nUninstalled package \"mip-org/core/matlab_schemer\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab_schemer\"...\n\nInstallation plan:\n  - mip-org/core/matlab_schemer 1.4.0\n\nDownloading mip-org/core/matlab_schemer 1.4.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/matlab_schemer-1.4.0/matlab_schemer-1.4.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/matlab_schemer\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load matlab_schemer\n@@STEP_END install status=ok ms=1456\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_schemer/matlab_schemer/schemer_export.m (syntax error at line 233)\nLoaded package \"mip-org/core/matlab_schemer\"\n@@STEP_END load status=ok ms=90\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/matlab_schemer\": test_matlab_schemer.m\nTesting matlab_schemer path entries...\nTesting bundled schemes directory...\nSUCCESS\n@@STEP_END test status=ok ms=93\n@@STEP_BEGIN unload\nPackage \"matlab_schemer\" is not currently loaded\n@@STEP_END unload status=ok ms=23\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/matlab_schemer\"...\nUninstalled package \"mip-org/core/matlab_schemer\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=153\n@@ALL_DONE\n"
+    },
+    {
+      "name": "matlab_tree",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 1662,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1195,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab_tree\"...\n\nInstallation plan:\n  - mip-org/core/matlab_tree master\n\nDownloading mip-org/core/matlab_tree master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/matlab_tree-master/matlab_tree-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/matlab_tree\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load matlab_tree\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 30,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_tree/matlab_tree/@tree/private/permuteIfNeeded.m (syntax error at line 1)\nLoaded package \"mip-org/core/matlab_tree\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 67,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/matlab_tree\": test_matlab_tree.m\nTesting tree class is on the path...\nTesting construction with root content...\nTesting addnode and parent/child relationships...\nTesting isleaf and findleaves...\nTesting siblings...\nTesting depth and iterators...\nTesting set updates node content...\nSUCCESS\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"matlab_tree\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 62,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/matlab_tree\"...\nUninstalled package \"mip-org/core/matlab_tree\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/matlab_tree\"...\n\nInstallation plan:\n  - mip-org/core/matlab_tree master\n\nDownloading mip-org/core/matlab_tree master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/matlab_tree-master/matlab_tree-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/matlab_tree\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load matlab_tree\n@@STEP_END install status=ok ms=1195\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/matlab_tree/matlab_tree/@tree/private/permuteIfNeeded.m (syntax error at line 1)\nLoaded package \"mip-org/core/matlab_tree\"\n@@STEP_END load status=ok ms=30\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/matlab_tree\": test_matlab_tree.m\nTesting tree class is on the path...\nTesting construction with root content...\nTesting addnode and parent/child relationships...\nTesting isleaf and findleaves...\nTesting siblings...\nTesting depth and iterators...\nTesting set updates node content...\nSUCCESS\n@@STEP_END test status=ok ms=67\n@@STEP_BEGIN unload\nPackage \"matlab_tree\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/matlab_tree\"...\nUninstalled package \"mip-org/core/matlab_tree\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=62\n@@ALL_DONE\n"
+    },
+    {
+      "name": "mesh2d",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/mesh2d\": Cannot convert non-scalar tensor to number",
+      "durationMs": 2643,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1915,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/mesh2d\"...\n\nInstallation plan (2 packages):\n  - mip-org/core/inpoly master\n  - mip-org/core/mesh2d master\n\nDownloading mip-org/core/inpoly master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/inpoly-master/inpoly-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/inpoly\"\nDownloading mip-org/core/mesh2d master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/mesh2d-master/mesh2d-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/mesh2d\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load mesh2d\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 70,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loading dependencies for \"mip-org/core/mesh2d\": inpoly\nLoaded package \"mip-org/core/inpoly\"\nLoaded package \"mip-org/core/mesh2d\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 284,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/mesh2d\": Cannot convert non-scalar tensor to number",
+          "log": "Running test script for \"mip-org/core/mesh2d\": test_mesh2d_channel.m\n=== Testing MESH2D ===\nLoaded package \"mip-org/core/inpoly\"\n\n Refine triangulation...\n\n -------------------------------------------------------\n      |ITER.|          |CDT1(X)|          |CDT2(X)|     \n -------------------------------------------------------\n[matmul] using bridge: native LAPACK addon\n          4                 32                  2\n         10                 32                118\n\nError inside test script for \"mip-org/core/mesh2d\":\n  Cannot convert non-scalar tensor to number\nCall stack (most recent call first):\n  at ballkern (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/aabb-tree/findball.m:118)\n  at queryset (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/aabb-tree/queryset.m:73)\n  at findball (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/aabb-tree/findball.m:94)\n  at cdtref2 (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/refine2.m:1059)\n  at refine2 (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/refine2.m:269)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/test_mesh2d_channel.m:17\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 11,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"mesh2d\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 64,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/mesh2d\"...\nUninstalled package \"mip-org/core/mesh2d\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/mesh2d\"...\n\nInstallation plan (2 packages):\n  - mip-org/core/inpoly master\n  - mip-org/core/mesh2d master\n\nDownloading mip-org/core/inpoly master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/inpoly-master/inpoly-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/inpoly\"\nDownloading mip-org/core/mesh2d master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/mesh2d-master/mesh2d-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/mesh2d\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load mesh2d\n@@STEP_END install status=ok ms=1915\n@@STEP_BEGIN load\nLoading dependencies for \"mip-org/core/mesh2d\": inpoly\nLoaded package \"mip-org/core/inpoly\"\nLoaded package \"mip-org/core/mesh2d\"\n@@STEP_END load status=ok ms=70\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/mesh2d\": test_mesh2d_channel.m\n=== Testing MESH2D ===\nLoaded package \"mip-org/core/inpoly\"\n\n Refine triangulation...\n\n -------------------------------------------------------\n      |ITER.|          |CDT1(X)|          |CDT2(X)|     \n -------------------------------------------------------\n[matmul] using bridge: native LAPACK addon\n          4                 32                  2\n         10                 32                118\n\nError inside test script for \"mip-org/core/mesh2d\":\n  Cannot convert non-scalar tensor to number\nCall stack (most recent call first):\n  at ballkern (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/aabb-tree/findball.m:118)\n  at queryset (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/aabb-tree/queryset.m:73)\n  at findball (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/aabb-tree/findball.m:94)\n  at cdtref2 (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/refine2.m:1059)\n  at refine2 (/home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/refine2.m:269)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/mesh2d/mesh2d/test_mesh2d_channel.m:17\n\n@@STEP_END test status=fail ms=284 id=mip:test:failed msg=Test failed for \"mip-org/core/mesh2d\": Cannot convert non-scalar tensor to number\n@@STEP_BEGIN unload\nPackage \"mesh2d\" is not currently loaded\n@@STEP_END unload status=ok ms=11\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/mesh2d\"...\nUninstalled package \"mip-org/core/mesh2d\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=64\n@@ALL_DONE\n"
+    },
+    {
+      "name": "meshpart",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/meshpart\": Undefined function or variable 'graph'",
+      "durationMs": 1874,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1408,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/meshpart\"...\n\nInstallation plan:\n  - mip-org/core/meshpart v1.1\n\nDownloading mip-org/core/meshpart v1.1...\nDownloading from https://github.com/mip-org/mip-core/releases/download/meshpart-v1.1/meshpart-v1.1-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/meshpart\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load meshpart\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 28,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/meshpart\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 49,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/meshpart\": Undefined function or variable 'graph'",
+          "log": "Running test script for \"mip-org/core/meshpart\": test_meshpart_channel.m\n=== Testing meshpart ===\n  grid5(20): 400-vertex grid graph\n\nError inside test script for \"mip-org/core/meshpart\":\n  Undefined function or variable 'graph'\nCall stack (most recent call first):\n  at fiedler (/home/magland/.numbl/mip/packages/gh/mip-org/core/meshpart/meshpart/src/util/fiedler.m:26)\n  at specpart (/home/magland/.numbl/mip/packages/gh/mip-org/core/meshpart/meshpart/src/specpart.m:19)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/meshpart/meshpart/test_meshpart_channel.m:28\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"meshpart\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 53,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/meshpart\"...\nUninstalled package \"mip-org/core/meshpart\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/meshpart\"...\n\nInstallation plan:\n  - mip-org/core/meshpart v1.1\n\nDownloading mip-org/core/meshpart v1.1...\nDownloading from https://github.com/mip-org/mip-core/releases/download/meshpart-v1.1/meshpart-v1.1-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/meshpart\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load meshpart\n@@STEP_END install status=ok ms=1408\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/meshpart\"\n@@STEP_END load status=ok ms=28\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/meshpart\": test_meshpart_channel.m\n=== Testing meshpart ===\n  grid5(20): 400-vertex grid graph\n\nError inside test script for \"mip-org/core/meshpart\":\n  Undefined function or variable 'graph'\nCall stack (most recent call first):\n  at fiedler (/home/magland/.numbl/mip/packages/gh/mip-org/core/meshpart/meshpart/src/util/fiedler.m:26)\n  at specpart (/home/magland/.numbl/mip/packages/gh/mip-org/core/meshpart/meshpart/src/specpart.m:19)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/meshpart/meshpart/test_meshpart_channel.m:28\n\n@@STEP_END test status=fail ms=49 id=mip:test:failed msg=Test failed for \"mip-org/core/meshpart\": Undefined function or variable 'graph'\n@@STEP_BEGIN unload\nPackage \"meshpart\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/meshpart\"...\nUninstalled package \"mip-org/core/meshpart\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=53\n@@ALL_DONE\n"
+    },
+    {
+      "name": "mmess",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/mmess\": Undefined function or variable 'gallery'",
+      "durationMs": 4729,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 3414,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/mmess\"...\n\nInstallation plan:\n  - mip-org/core/mmess 3.1\n\nDownloading mip-org/core/mmess 3.1...\nDownloading from https://github.com/mip-org/mip-core/releases/download/mmess-3.1/mmess-3.1-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/mmess\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load mmess\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 375,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/mmess\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 295,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/mmess\": Undefined function or variable 'gallery'",
+          "log": "Running test script for \"mip-org/core/mmess\": test_mmess_channel.m\n=== Testing M-M.E.S.S. ===\n\nError inside test script for \"mip-org/core/mmess\":\n  Undefined function or variable 'gallery'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/mmess/mmess/test_mmess_channel.m:13\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 61,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"mmess\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 281,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/mmess\"...\nUninstalled package \"mip-org/core/mmess\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/mmess\"...\n\nInstallation plan:\n  - mip-org/core/mmess 3.1\n\nDownloading mip-org/core/mmess 3.1...\nDownloading from https://github.com/mip-org/mip-core/releases/download/mmess-3.1/mmess-3.1-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/mmess\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load mmess\n@@STEP_END install status=ok ms=3414\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/mmess\"\n@@STEP_END load status=ok ms=375\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/mmess\": test_mmess_channel.m\n=== Testing M-M.E.S.S. ===\n\nError inside test script for \"mip-org/core/mmess\":\n  Undefined function or variable 'gallery'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/mmess/mmess/test_mmess_channel.m:13\n\n@@STEP_END test status=fail ms=295 id=mip:test:failed msg=Test failed for \"mip-org/core/mmess\": Undefined function or variable 'gallery'\n@@STEP_BEGIN unload\nPackage \"mmess\" is not currently loaded\n@@STEP_END unload status=ok ms=61\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/mmess\"...\nUninstalled package \"mip-org/core/mmess\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=281\n@@ALL_DONE\n"
+    },
+    {
+      "name": "mole",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 1598,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1110,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/mole\"...\n\nInstallation plan:\n  - mip-org/core/mole 1.2.0\n\nDownloading mip-org/core/mole 1.2.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/mole-1.2.0/mole-1.2.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/mole\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load mole\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 42,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/mole\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 55,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/mole\": test_mole_channel.m\n=== Testing MOLE ===\n  mimetic Laplacian OK (Lap(x^2) = 2 to 1.1e-13)\n[linsolve] using bridge: native LAPACK addon\n  1-D elliptic solve OK (rel err 5.00e-10)\n=== MOLE test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 10,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"mole\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 57,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/mole\"...\nUninstalled package \"mip-org/core/mole\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/mole\"...\n\nInstallation plan:\n  - mip-org/core/mole 1.2.0\n\nDownloading mip-org/core/mole 1.2.0...\nDownloading from https://github.com/mip-org/mip-core/releases/download/mole-1.2.0/mole-1.2.0-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/mole\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load mole\n@@STEP_END install status=ok ms=1110\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/mole\"\n@@STEP_END load status=ok ms=42\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/mole\": test_mole_channel.m\n=== Testing MOLE ===\n  mimetic Laplacian OK (Lap(x^2) = 2 to 1.1e-13)\n[linsolve] using bridge: native LAPACK addon\n  1-D elliptic solve OK (rel err 5.00e-10)\n=== MOLE test passed ===\n@@STEP_END test status=ok ms=55\n@@STEP_BEGIN unload\nPackage \"mole\" is not currently loaded\n@@STEP_END unload status=ok ms=10\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/mole\"...\nUninstalled package \"mip-org/core/mole\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=57\n@@ALL_DONE\n"
+    },
+    {
+      "name": "nurbs",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 705,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 142,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/nurbs\"...\nPackage \"mip-org/core/nurbs\" is already installed\n\nAll packages already installed.\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 67,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/nurbs\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 86,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/nurbs\": test_nurbs_channel.m\n=== Testing NURBS ===\n[matmul] using bridge: native LAPACK addon\n  NURBS circle OK (radii within 2.2e-16 of 1)\n  NURBS surface OK\n=== NURBS test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"nurbs\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 86,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/nurbs\"...\nUninstalled package \"mip-org/core/nurbs\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/nurbs\"...\nPackage \"mip-org/core/nurbs\" is already installed\n\nAll packages already installed.\n@@STEP_END install status=ok ms=142\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/nurbs\"\n@@STEP_END load status=ok ms=67\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/nurbs\": test_nurbs_channel.m\n=== Testing NURBS ===\n[matmul] using bridge: native LAPACK addon\n  NURBS circle OK (radii within 2.2e-16 of 1)\n  NURBS surface OK\n=== NURBS test passed ===\n@@STEP_END test status=ok ms=86\n@@STEP_BEGIN unload\nPackage \"nurbs\" is not currently loaded\n@@STEP_END unload status=ok ms=8\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/nurbs\"...\nUninstalled package \"mip-org/core/nurbs\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=86\n@@ALL_DONE\n"
+    },
+    {
+      "name": "rktoolbox",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/rktoolbox\": Undefined function or variable 'gallery'",
+      "durationMs": 1804,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1306,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/rktoolbox\"...\n\nInstallation plan:\n  - mip-org/core/rktoolbox 2.9\n\nDownloading mip-org/core/rktoolbox 2.9...\nDownloading from https://github.com/mip-org/mip-core/releases/download/rktoolbox-2.9/rktoolbox-2.9-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/rktoolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load rktoolbox\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 68,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/rktoolbox/rktoolbox/rktoolbox/@rkfun/private/sym2rkfun.m (syntax error at line 23)\nLoaded package \"mip-org/core/rktoolbox\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 53,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/rktoolbox\": Undefined function or variable 'gallery'",
+          "log": "Running test script for \"mip-org/core/rktoolbox\": test_rktoolbox_channel.m\n=== Testing RKToolbox ===\n\nError inside test script for \"mip-org/core/rktoolbox\":\n  Undefined function or variable 'gallery'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/rktoolbox/rktoolbox/test_rktoolbox_channel.m:12\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"rktoolbox\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 66,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/rktoolbox\"...\nUninstalled package \"mip-org/core/rktoolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/rktoolbox\"...\n\nInstallation plan:\n  - mip-org/core/rktoolbox 2.9\n\nDownloading mip-org/core/rktoolbox 2.9...\nDownloading from https://github.com/mip-org/mip-core/releases/download/rktoolbox-2.9/rktoolbox-2.9-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/rktoolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load rktoolbox\n@@STEP_END install status=ok ms=1306\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/rktoolbox/rktoolbox/rktoolbox/@rkfun/private/sym2rkfun.m (syntax error at line 23)\nLoaded package \"mip-org/core/rktoolbox\"\n@@STEP_END load status=ok ms=68\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/rktoolbox\": test_rktoolbox_channel.m\n=== Testing RKToolbox ===\n\nError inside test script for \"mip-org/core/rktoolbox\":\n  Undefined function or variable 'gallery'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/rktoolbox/rktoolbox/test_rktoolbox_channel.m:12\n\n@@STEP_END test status=fail ms=53 id=mip:test:failed msg=Test failed for \"mip-org/core/rktoolbox\": Undefined function or variable 'gallery'\n@@STEP_BEGIN unload\nPackage \"rktoolbox\" is not currently loaded\n@@STEP_END unload status=ok ms=8\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/rktoolbox\"...\nUninstalled package \"mip-org/core/rktoolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=66\n@@ALL_DONE\n"
+    },
+    {
+      "name": "robotics_toolbox_matlab",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/robotics_toolbox_matlab\": SerialLink class is not on the path",
+      "durationMs": 6775,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 5986,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/robotics_toolbox_matlab\"...\n\nInstallation plan (2 packages):\n  - mip-org/core/spatialmath_matlab master\n  - mip-org/core/robotics_toolbox_matlab 10.4\n\nDownloading mip-org/core/spatialmath_matlab master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spatialmath_matlab-master/spatialmath_matlab-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spatialmath_matlab\"\nDownloading mip-org/core/robotics_toolbox_matlab 10.4...\nDownloading from https://github.com/mip-org/mip-core/releases/download/robotics_toolbox_matlab-10.4/robotics_toolbox_matlab-10.4-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/robotics_toolbox_matlab\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load robotics_toolbox_matlab\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 239,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loading dependencies for \"mip-org/core/robotics_toolbox_matlab\": spatialmath_matlab\nLoaded package \"mip-org/core/spatialmath_matlab\"\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/robotics_toolbox_matlab/robotics_toolbox_matlab/@SerialLink/SerialLink.m (syntax error at line 149)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/robotics_toolbox_matlab/robotics_toolbox_matlab/ccodefunctionstring.m (syntax error at line 71)\nLoaded package \"mip-org/core/robotics_toolbox_matlab\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 152,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/robotics_toolbox_matlab\": SerialLink class is not on the path",
+          "log": "Running test script for \"mip-org/core/robotics_toolbox_matlab\": test_robotics_toolbox_matlab_channel.m\n=== Testing robotics-toolbox-matlab ===\n\nError inside test script for \"mip-org/core/robotics_toolbox_matlab\":\n  SerialLink class is not on the path\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/robotics_toolbox_matlab/robotics_toolbox_matlab/test_robotics_toolbox_matlab_channel.m:7\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"robotics_toolbox_matlab\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 92,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/robotics_toolbox_matlab\"...\nUninstalled package \"mip-org/core/robotics_toolbox_matlab\"\n\nPruning unnecessary packages: mip-org/core/spatialmath_matlab\n  Pruned package \"mip-org/core/spatialmath_matlab\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/robotics_toolbox_matlab\"...\n\nInstallation plan (2 packages):\n  - mip-org/core/spatialmath_matlab master\n  - mip-org/core/robotics_toolbox_matlab 10.4\n\nDownloading mip-org/core/spatialmath_matlab master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spatialmath_matlab-master/spatialmath_matlab-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spatialmath_matlab\"\nDownloading mip-org/core/robotics_toolbox_matlab 10.4...\nDownloading from https://github.com/mip-org/mip-core/releases/download/robotics_toolbox_matlab-10.4/robotics_toolbox_matlab-10.4-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/robotics_toolbox_matlab\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load robotics_toolbox_matlab\n@@STEP_END install status=ok ms=5986\n@@STEP_BEGIN load\nLoading dependencies for \"mip-org/core/robotics_toolbox_matlab\": spatialmath_matlab\nLoaded package \"mip-org/core/spatialmath_matlab\"\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/robotics_toolbox_matlab/robotics_toolbox_matlab/@SerialLink/SerialLink.m (syntax error at line 149)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/robotics_toolbox_matlab/robotics_toolbox_matlab/ccodefunctionstring.m (syntax error at line 71)\nLoaded package \"mip-org/core/robotics_toolbox_matlab\"\n@@STEP_END load status=ok ms=239\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/robotics_toolbox_matlab\": test_robotics_toolbox_matlab_channel.m\n=== Testing robotics-toolbox-matlab ===\n\nError inside test script for \"mip-org/core/robotics_toolbox_matlab\":\n  SerialLink class is not on the path\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/robotics_toolbox_matlab/robotics_toolbox_matlab/test_robotics_toolbox_matlab_channel.m:7\n\n@@STEP_END test status=fail ms=152 id=mip:test:failed msg=Test failed for \"mip-org/core/robotics_toolbox_matlab\": SerialLink class is not on the path\n@@STEP_BEGIN unload\nPackage \"robotics_toolbox_matlab\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/robotics_toolbox_matlab\"...\nUninstalled package \"mip-org/core/robotics_toolbox_matlab\"\n\nPruning unnecessary packages: mip-org/core/spatialmath_matlab\n  Pruned package \"mip-org/core/spatialmath_matlab\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=92\n@@ALL_DONE\n"
+    },
+    {
+      "name": "sc_toolbox",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/sc_toolbox\": Undefined function or variable 'superiorto'",
+      "durationMs": 1857,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1147,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/sc_toolbox\"...\n\nInstallation plan:\n  - mip-org/core/sc_toolbox 3.1.3\n\nDownloading mip-org/core/sc_toolbox 3.1.3...\nDownloading from https://github.com/mip-org/mip-core/releases/download/sc_toolbox-3.1.3/sc_toolbox-3.1.3-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/sc_toolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load sc_toolbox\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 139,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/sc_toolbox\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 92,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/sc_toolbox\": Undefined function or variable 'superiorto'",
+          "log": "Running test script for \"mip-org/core/sc_toolbox\": test_sc_toolbox_channel.m\n=== Testing SC Toolbox ===\n\nError inside test script for \"mip-org/core/sc_toolbox\":\n  Undefined function or variable 'superiorto'\nCall stack (most recent call first):\n  at polygon (/home/magland/.numbl/mip/packages/gh/mip-org/core/sc_toolbox/sc_toolbox/@polygon/polygon.m:21)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/sc_toolbox/sc_toolbox/test_sc_toolbox_channel.m:10\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 7,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"sc_toolbox\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 59,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/sc_toolbox\"...\nUninstalled package \"mip-org/core/sc_toolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/sc_toolbox\"...\n\nInstallation plan:\n  - mip-org/core/sc_toolbox 3.1.3\n\nDownloading mip-org/core/sc_toolbox 3.1.3...\nDownloading from https://github.com/mip-org/mip-core/releases/download/sc_toolbox-3.1.3/sc_toolbox-3.1.3-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/sc_toolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load sc_toolbox\n@@STEP_END install status=ok ms=1147\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/sc_toolbox\"\n@@STEP_END load status=ok ms=139\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/sc_toolbox\": test_sc_toolbox_channel.m\n=== Testing SC Toolbox ===\n\nError inside test script for \"mip-org/core/sc_toolbox\":\n  Undefined function or variable 'superiorto'\nCall stack (most recent call first):\n  at polygon (/home/magland/.numbl/mip/packages/gh/mip-org/core/sc_toolbox/sc_toolbox/@polygon/polygon.m:21)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/sc_toolbox/sc_toolbox/test_sc_toolbox_channel.m:10\n\n@@STEP_END test status=fail ms=92 id=mip:test:failed msg=Test failed for \"mip-org/core/sc_toolbox\": Undefined function or variable 'superiorto'\n@@STEP_BEGIN unload\nPackage \"sc_toolbox\" is not currently loaded\n@@STEP_END unload status=ok ms=7\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/sc_toolbox\"...\nUninstalled package \"mip-org/core/sc_toolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=59\n@@ALL_DONE\n"
+    },
+    {
+      "name": "spatialmath_matlab",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/spatialmath_matlab\": repmat: first argument must be numeric",
+      "durationMs": 3318,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 2575,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spatialmath_matlab\"...\n\nInstallation plan:\n  - mip-org/core/spatialmath_matlab master\n\nDownloading mip-org/core/spatialmath_matlab master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spatialmath_matlab-master/spatialmath_matlab-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spatialmath_matlab\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spatialmath_matlab\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 123,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/spatialmath_matlab\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 165,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/spatialmath_matlab\": repmat: first argument must be numeric",
+          "log": "Running test script for \"mip-org/core/spatialmath_matlab\": test_spatialmath_matlab_channel.m\n=== Testing spatialmath-matlab ===\n[matmul] using bridge: native LAPACK addon\n[norm] using bridge: native LAPACK addon\n  rotx/roty/rotz produce a valid SO(3) matrix\n  rpy2r/tr2rpy round-trip OK\n  trexp/trlog round-trip OK\n\nError inside test script for \"mip-org/core/spatialmath_matlab\":\n  repmat: first argument must be numeric\nCall stack (most recent call first):\n  at mtimes (/home/magland/.numbl/mip/packages/gh/mip-org/core/spatialmath_matlab/spatialmath_matlab/RTBPose.m:327)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/spatialmath_matlab/spatialmath_matlab/SO3.m:578\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 10,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"spatialmath_matlab\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 90,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/spatialmath_matlab\"...\nUninstalled package \"mip-org/core/spatialmath_matlab\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spatialmath_matlab\"...\n\nInstallation plan:\n  - mip-org/core/spatialmath_matlab master\n\nDownloading mip-org/core/spatialmath_matlab master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spatialmath_matlab-master/spatialmath_matlab-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spatialmath_matlab\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spatialmath_matlab\n@@STEP_END install status=ok ms=2575\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/spatialmath_matlab\"\n@@STEP_END load status=ok ms=123\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/spatialmath_matlab\": test_spatialmath_matlab_channel.m\n=== Testing spatialmath-matlab ===\n[matmul] using bridge: native LAPACK addon\n[norm] using bridge: native LAPACK addon\n  rotx/roty/rotz produce a valid SO(3) matrix\n  rpy2r/tr2rpy round-trip OK\n  trexp/trlog round-trip OK\n\nError inside test script for \"mip-org/core/spatialmath_matlab\":\n  repmat: first argument must be numeric\nCall stack (most recent call first):\n  at mtimes (/home/magland/.numbl/mip/packages/gh/mip-org/core/spatialmath_matlab/spatialmath_matlab/RTBPose.m:327)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/spatialmath_matlab/spatialmath_matlab/SO3.m:578\n\n@@STEP_END test status=fail ms=165 id=mip:test:failed msg=Test failed for \"mip-org/core/spatialmath_matlab\": repmat: first argument must be numeric\n@@STEP_BEGIN unload\nPackage \"spatialmath_matlab\" is not currently loaded\n@@STEP_END unload status=ok ms=10\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/spatialmath_matlab\"...\nUninstalled package \"mip-org/core/spatialmath_matlab\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=90\n@@ALL_DONE\n"
+    },
+    {
+      "name": "spherical_conformal_map",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/spherical_conformal_map\": Undefined function or variable 'convhull'",
+      "durationMs": 2633,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 2177,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spherical_conformal_map\"...\n\nInstallation plan:\n  - mip-org/core/spherical_conformal_map master\n\nDownloading mip-org/core/spherical_conformal_map master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spherical_conformal_map-master/spherical_conformal_map-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spherical_conformal_map\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spherical_conformal_map\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 28,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/spherical_conformal_map\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 52,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/spherical_conformal_map\": Undefined function or variable 'convhull'",
+          "log": "Running test script for \"mip-org/core/spherical_conformal_map\": test_spherical_conformal_map_channel.m\n=== Testing spherical-conformal-map ===\n\nError inside test script for \"mip-org/core/spherical_conformal_map\":\n  Undefined function or variable 'convhull'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/spherical_conformal_map/spherical_conformal_map/test_spherical_conformal_map_channel.m:17\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"spherical_conformal_map\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 59,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/spherical_conformal_map\"...\nUninstalled package \"mip-org/core/spherical_conformal_map\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spherical_conformal_map\"...\n\nInstallation plan:\n  - mip-org/core/spherical_conformal_map master\n\nDownloading mip-org/core/spherical_conformal_map master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spherical_conformal_map-master/spherical_conformal_map-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spherical_conformal_map\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spherical_conformal_map\n@@STEP_END install status=ok ms=2177\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/spherical_conformal_map\"\n@@STEP_END load status=ok ms=28\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/spherical_conformal_map\": test_spherical_conformal_map_channel.m\n=== Testing spherical-conformal-map ===\n\nError inside test script for \"mip-org/core/spherical_conformal_map\":\n  Undefined function or variable 'convhull'\nCall stack (most recent call first):\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/spherical_conformal_map/spherical_conformal_map/test_spherical_conformal_map_channel.m:17\n\n@@STEP_END test status=fail ms=52 id=mip:test:failed msg=Test failed for \"mip-org/core/spherical_conformal_map\": Undefined function or variable 'convhull'\n@@STEP_BEGIN unload\nPackage \"spherical_conformal_map\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/spherical_conformal_map\"...\nUninstalled package \"mip-org/core/spherical_conformal_map\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=59\n@@ALL_DONE\n"
+    },
+    {
+      "name": "spm",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/spm\": Undefined function or variable 'cellstr'",
+      "durationMs": 24058,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 22675,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spm\"...\n\nInstallation plan:\n  - mip-org/core/spm master\n\nDownloading mip-org/core/spm master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spm-master/spm-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spm\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spm\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 539,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/@xmltree/private/xml_parser.m (syntax error at line 420)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_eeg_prep.m (syntax error at line 316)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_fx_hdm.m (syntax error at line 75)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_subfun.m (syntax error at line 16)\nLoaded package \"mip-org/core/spm\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 387,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/spm\": Undefined function or variable 'cellstr'",
+          "log": "Running test script for \"mip-org/core/spm\": test_spm.m\nTesting that spm.m is on the path...\nTesting spm_file...\n\nError inside test script for \"mip-org/core/spm\":\n  Undefined function or variable 'cellstr'\nCall stack (most recent call first):\n  at spm_file (/home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_file.m:62)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/test_spm.m:13\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 7,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"spm\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 97,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/spm\"...\nUninstalled package \"mip-org/core/spm\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spm\"...\n\nInstallation plan:\n  - mip-org/core/spm master\n\nDownloading mip-org/core/spm master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spm-master/spm-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spm\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spm\n@@STEP_END install status=ok ms=22675\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/@xmltree/private/xml_parser.m (syntax error at line 420)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_eeg_prep.m (syntax error at line 316)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_fx_hdm.m (syntax error at line 75)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_subfun.m (syntax error at line 16)\nLoaded package \"mip-org/core/spm\"\n@@STEP_END load status=ok ms=539\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/spm\": test_spm.m\nTesting that spm.m is on the path...\nTesting spm_file...\n\nError inside test script for \"mip-org/core/spm\":\n  Undefined function or variable 'cellstr'\nCall stack (most recent call first):\n  at spm_file (/home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/spm_file.m:62)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/spm/spm/test_spm.m:13\n\n@@STEP_END test status=fail ms=387 id=mip:test:failed msg=Test failed for \"mip-org/core/spm\": Undefined function or variable 'cellstr'\n@@STEP_BEGIN unload\nPackage \"spm\" is not currently loaded\n@@STEP_END unload status=ok ms=7\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/spm\"...\nUninstalled package \"mip-org/core/spm\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=97\n@@ALL_DONE\n"
+    },
+    {
+      "name": "spot",
+      "category": "ok",
+      "ok": true,
+      "noTestScript": false,
+      "failingStep": null,
+      "errorId": null,
+      "errorMessage": null,
+      "durationMs": 2059,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1540,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spot\"...\n\nInstallation plan:\n  - mip-org/core/spot 1.2\n\nDownloading mip-org/core/spot 1.2...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spot-1.2/spot-1.2-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spot\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spot\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 77,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/spot\"\n"
+        },
+        {
+          "name": "test",
+          "status": "ok",
+          "ms": 70,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Running test script for \"mip-org/core/spot\": test_spot_any.m\n=== Testing Spot (pure-MATLAB) ===\n[matmul] using bridge: native LAPACK addon\n  core operator algebra OK\n=== Spot (pure-MATLAB) test passed ===\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 7,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"spot\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 69,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/spot\"...\nUninstalled package \"mip-org/core/spot\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/spot\"...\n\nInstallation plan:\n  - mip-org/core/spot 1.2\n\nDownloading mip-org/core/spot 1.2...\nDownloading from https://github.com/mip-org/mip-core/releases/download/spot-1.2/spot-1.2-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/spot\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load spot\n@@STEP_END install status=ok ms=1540\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/spot\"\n@@STEP_END load status=ok ms=77\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/spot\": test_spot_any.m\n=== Testing Spot (pure-MATLAB) ===\n[matmul] using bridge: native LAPACK addon\n  core operator algebra OK\n=== Spot (pure-MATLAB) test passed ===\n@@STEP_END test status=ok ms=70\n@@STEP_BEGIN unload\nPackage \"spot\" is not currently loaded\n@@STEP_END unload status=ok ms=7\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/spot\"...\nUninstalled package \"mip-org/core/spot\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=69\n@@ALL_DONE\n"
+    },
+    {
+      "name": "tensor_toolbox",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/tensor_toolbox\": Undefined function or variable 'superclasses'",
+      "durationMs": 2638,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 2033,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/tensor_toolbox\"...\n\nInstallation plan:\n  - mip-org/core/tensor_toolbox 3.8\n\nDownloading mip-org/core/tensor_toolbox 3.8...\nDownloading from https://github.com/mip-org/mip-core/releases/download/tensor_toolbox-3.8/tensor_toolbox-3.8-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/tensor_toolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load tensor_toolbox\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 127,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Loaded package \"mip-org/core/tensor_toolbox\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 91,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/tensor_toolbox\": Undefined function or variable 'superclasses'",
+          "log": "Running test script for \"mip-org/core/tensor_toolbox\": test_tensor_toolbox_any.m\n=== Testing Tensor Toolbox (pure-MATLAB) ===\n\nError inside test script for \"mip-org/core/tensor_toolbox\":\n  Undefined function or variable 'superclasses'\nCall stack (most recent call first):\n  at tensor (/home/magland/.numbl/mip/packages/gh/mip-org/core/tensor_toolbox/tensor_toolbox/@tensor/tensor.m:125)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/tensor_toolbox/tensor_toolbox/test_tensor_toolbox_any.m:11\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 8,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"tensor_toolbox\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 69,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/tensor_toolbox\"...\nUninstalled package \"mip-org/core/tensor_toolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/tensor_toolbox\"...\n\nInstallation plan:\n  - mip-org/core/tensor_toolbox 3.8\n\nDownloading mip-org/core/tensor_toolbox 3.8...\nDownloading from https://github.com/mip-org/mip-core/releases/download/tensor_toolbox-3.8/tensor_toolbox-3.8-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/tensor_toolbox\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load tensor_toolbox\n@@STEP_END install status=ok ms=2033\n@@STEP_BEGIN load\nLoaded package \"mip-org/core/tensor_toolbox\"\n@@STEP_END load status=ok ms=127\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/tensor_toolbox\": test_tensor_toolbox_any.m\n=== Testing Tensor Toolbox (pure-MATLAB) ===\n\nError inside test script for \"mip-org/core/tensor_toolbox\":\n  Undefined function or variable 'superclasses'\nCall stack (most recent call first):\n  at tensor (/home/magland/.numbl/mip/packages/gh/mip-org/core/tensor_toolbox/tensor_toolbox/@tensor/tensor.m:125)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/tensor_toolbox/tensor_toolbox/test_tensor_toolbox_any.m:11\n\n@@STEP_END test status=fail ms=91 id=mip:test:failed msg=Test failed for \"mip-org/core/tensor_toolbox\": Undefined function or variable 'superclasses'\n@@STEP_BEGIN unload\nPackage \"tensor_toolbox\" is not currently loaded\n@@STEP_END unload status=ok ms=8\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/tensor_toolbox\"...\nUninstalled package \"mip-org/core/tensor_toolbox\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=69\n@@ALL_DONE\n"
+    },
+    {
+      "name": "ultrasem",
+      "category": "test_failed",
+      "ok": false,
+      "noTestScript": false,
+      "failingStep": "test",
+      "errorId": "mip:test:failed",
+      "errorMessage": "Test failed for \"mip-org/core/ultrasem\": No method 'Rect' for class 'ultraSEM'",
+      "durationMs": 1680,
+      "timedOut": false,
+      "exitCode": 0,
+      "steps": [
+        {
+          "name": "install",
+          "status": "ok",
+          "ms": 1158,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Using channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/ultrasem\"...\n\nInstallation plan:\n  - mip-org/core/ultrasem master\n\nDownloading mip-org/core/ultrasem master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/ultrasem-master/ultrasem-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/ultrasem\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load ultrasem\n"
+        },
+        {
+          "name": "load",
+          "status": "ok",
+          "ms": 61,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Warning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Quad/centroid.m (syntax error at line 6)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Rect/Rect.m (syntax error at line 21)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Rect/centroid.m (syntax error at line 6)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Tri/centroid.m (syntax error at line 6)\nLoaded package \"mip-org/core/ultrasem\"\n"
+        },
+        {
+          "name": "test",
+          "status": "fail",
+          "ms": 54,
+          "errorId": "mip:test:failed",
+          "errorMessage": "Test failed for \"mip-org/core/ultrasem\": No method 'Rect' for class 'ultraSEM'",
+          "log": "Running test script for \"mip-org/core/ultrasem\": test_ultrasem_channel.m\n=== Testing ultraSEM ===\n\nError inside test script for \"mip-org/core/ultrasem\":\n  No method 'Rect' for class 'ultraSEM'\nCall stack (most recent call first):\n  at rectangle (/home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Domain/rectangle.m:40)\n  at rectangle (/home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/@ultraSEM/ultraSEM.m:176)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/test_ultrasem_channel.m:11\n\n"
+        },
+        {
+          "name": "unload",
+          "status": "ok",
+          "ms": 9,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Package \"ultrasem\" is not currently loaded\n"
+        },
+        {
+          "name": "uninstall",
+          "status": "ok",
+          "ms": 79,
+          "errorId": null,
+          "errorMessage": null,
+          "log": "Uninstalling \"mip-org/core/ultrasem\"...\nUninstalled package \"mip-org/core/ultrasem\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n"
+        }
+      ],
+      "log": "@@STEP_BEGIN install\nUsing channel: mip-org/core\nDetected architecture: numbl_linux_x86_64\nFetching package index for mip-org/core...\nResolving dependencies for \"mip-org/core/ultrasem\"...\n\nInstallation plan:\n  - mip-org/core/ultrasem master\n\nDownloading mip-org/core/ultrasem master...\nDownloading from https://github.com/mip-org/mip-core/releases/download/ultrasem-master/ultrasem-master-any.mhl...\nDownload complete.\nExtracting package...\nSuccessfully installed \"mip-org/core/ultrasem\"\n\nSuccessfully installed 1 package(s).\n\nTo use installed packages, run:\n  mip load ultrasem\n@@STEP_END install status=ok ms=1158\n@@STEP_BEGIN load\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Quad/centroid.m (syntax error at line 6)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Rect/Rect.m (syntax error at line 21)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Rect/centroid.m (syntax error at line 6)\nWarning: skipping /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Tri/centroid.m (syntax error at line 6)\nLoaded package \"mip-org/core/ultrasem\"\n@@STEP_END load status=ok ms=61\n@@STEP_BEGIN test\nRunning test script for \"mip-org/core/ultrasem\": test_ultrasem_channel.m\n=== Testing ultraSEM ===\n\nError inside test script for \"mip-org/core/ultrasem\":\n  No method 'Rect' for class 'ultraSEM'\nCall stack (most recent call first):\n  at rectangle (/home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/+ultraSEM/@Domain/rectangle.m:40)\n  at rectangle (/home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/@ultraSEM/ultraSEM.m:176)\n  at /home/magland/.numbl/mip/packages/gh/mip-org/core/ultrasem/ultrasem/test_ultrasem_channel.m:11\n\n@@STEP_END test status=fail ms=54 id=mip:test:failed msg=Test failed for \"mip-org/core/ultrasem\": No method 'Rect' for class 'ultraSEM'\n@@STEP_BEGIN unload\nPackage \"ultrasem\" is not currently loaded\n@@STEP_END unload status=ok ms=9\n@@STEP_BEGIN uninstall\nUninstalling \"mip-org/core/ultrasem\"...\nUninstalled package \"mip-org/core/ultrasem\"\nWarning: Warning: Some installed packages have missing dependencies:\n  Package \"gh/flatironinstitute/flatironinstitute/surfacefun\" depends on \"chebfun\" which is not installed\n@@STEP_END uninstall status=ok ms=79\n@@ALL_DONE\n"
+    }
+  ]
+}
